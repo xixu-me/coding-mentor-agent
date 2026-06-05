@@ -1,0 +1,254 @@
+{
+  "ef43b29a90674502cd6745a5ea91e578bbb18ba7888ef16f9d7db32b179c3c0b": {
+    "name": "00_Setup.md",
+    "type": "md"
+  },
+  "42aa213df84c4c544909855e8ca188b20e6517fcac9ce4e0114476da68129603": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "d9a9d15d94a0a4e21191e3f91b2d17ec64232ed79ad0d83d7d1b571d3fbf0466": {
+    "name": "01_Python.md",
+    "type": "md"
+  },
+  "10514bfb50101804a6ac944ca47c00ef89383497ffdabd329900784ab264b1fa": {
+    "name": "02_Hello_world.md",
+    "type": "md"
+  },
+  "3339ec8b6a3a60a3673f8d1e0627388116bda768f26f6d96cddfab1acd1ea865": {
+    "name": "03_Numbers.md",
+    "type": "md"
+  },
+  "97b20bbcefb1a7667624924b1eda948897b55fdc8e8909f50ef4687497778d33": {
+    "name": "04_Strings.md",
+    "type": "md"
+  },
+  "6876733d76c10fe96665d2f28a837096e41e94db80a9337cf4abcb33abf7ed98": {
+    "name": "05_Lists.md",
+    "type": "md"
+  },
+  "ef20f7f10677a9886b6bccdd6dc17c8e31779b47399b93e70012af0e1571224d": {
+    "name": "06_Files.md",
+    "type": "md"
+  },
+  "cc562e16d261c94a4de50c80afb0f73bab264431b48662c82427cedde26101e9": {
+    "name": "07_Functions.md",
+    "type": "md"
+  },
+  "c64026ee0f9d1b537a832aeae00b29236d1e296a7b7eaffcb8d33048980758e3": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "862b4b8beb15872ef75a24dfa6f7a2a926e9634520ead2cf20e05a86991b36ad": {
+    "name": "01_Datatypes.md",
+    "type": "md"
+  },
+  "ec83bf30cc2169fc268e1429383e8003249d815a93055b8a302adb7ce27e7812": {
+    "name": "02_Containers.md",
+    "type": "md"
+  },
+  "dd47476587a4e1c362c6ddf72c368589f31872cec2e8ab5db9e0f5969396c74d": {
+    "name": "03_Formatting.md",
+    "type": "md"
+  },
+  "091bfc2f84e4e97b9368e54d44c0f6ef974d7aaab64787f8ac47734953af9dd9": {
+    "name": "04_Sequences.md",
+    "type": "md"
+  },
+  "60a36e343df5e39b4f2454bacb4bee17bd2ddc6f6b77dcd37aee8e3ac3c455db": {
+    "name": "05_Collections.md",
+    "type": "md"
+  },
+  "92a2c97d497c1d9f2d0d378586ee9a91fad2af912afc54d1e696ae0dccad4c40": {
+    "name": "06_List_comprehension.md",
+    "type": "md"
+  },
+  "d1feac05f1240a78273484e1761e4f85f8cc52c1c2a9236488e8f9d087a76a2c": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "18d0e1774ede35b9ba06aef5af2e441cf412fe663847ad4687ce65c1c78711d6": {
+    "name": "01_Script.md",
+    "type": "md"
+  },
+  "65fa23d2abaa65c407af625e16e3663dcce2491e7c17c2986a5a9961fcca8730": {
+    "name": "02_More_functions.md",
+    "type": "md"
+  },
+  "8e091bb38e8bbd0f79067d5d9d6aef86d09b994ba1f571ceb43f5e93dbd2fdaa": {
+    "name": "03_Error_checking.md",
+    "type": "md"
+  },
+  "6ee81183c35d56ebff5a09751eca2eac20ba659fb538a40fc97d7cc6311a3e5f": {
+    "name": "04_Modules.md",
+    "type": "md"
+  },
+  "f58b48311b1843d4d7ec3fc114c4503dbf43cb65be582c71538fb697a7cefb3e": {
+    "name": "05_Main_module.md",
+    "type": "md"
+  },
+  "341b8a70f3f03ce82f4920e674801c8dabd1dd61fc2b54362477de31754463e5": {
+    "name": "06_Design_discussion.md",
+    "type": "md"
+  },
+  "7828dbf59db0356e4f9433f9d82ba5373e9ddf7471e42d2dc76297db921bf860": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "16f5455514fe583c4f908b6794a9bd62be57a5eee05ac0920d30e4c6afee27cc": {
+    "name": "01_Class.md",
+    "type": "md"
+  },
+  "78b2f988a2009edc635224c3ce593c7db806c057358f8eac884577b74ac0b484": {
+    "name": "02_Inheritance.md",
+    "type": "md"
+  },
+  "527e16cfa77a462661fed634492fae69e47f72a738e799476ce178712ebc087b": {
+    "name": "03_Special_methods.md",
+    "type": "md"
+  },
+  "e645b862af55f3045b95bb028511b0bd560564a96c5c80976b9cca70d40ee4e7": {
+    "name": "04_Defining_exceptions.md",
+    "type": "md"
+  },
+  "98a07155511fc5b96c47d73f85476cc895a7db114a7ce0b58f73fdb740cedcf7": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "0c39dd6b3f31164cf190df24906ecbc8f77950f990e7612a6cfcce4466fb3ce9": {
+    "name": "01_Dicts_revisited.md",
+    "type": "md"
+  },
+  "a16f28bbae286ce1e8626821194de58ac0dd0d19b0d7b437cbfe9b071fd2daef": {
+    "name": "02_Classes_encapsulation.md",
+    "type": "md"
+  },
+  "825f4ee3bd490c8de568701d0240913bfdac90cc3a90462dd780ccdac027103f": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "daca3ec5d7c26b1b3bbbd7b00c53e55bfd70ecd140d6266649158f0f1a5ab0c1": {
+    "name": "01_Iteration_protocol.md",
+    "type": "md"
+  },
+  "51a536c9cf1671d422c4d9963b3fb101b808a1cbe99a6be06b0a24cb0782de89": {
+    "name": "02_Customizing_iteration.md",
+    "type": "md"
+  },
+  "148ad73c6e831383b51628220d3fcb84fbb1f1a803c56d9132f2ffc2bd1ce933": {
+    "name": "03_Producers_consumers.md",
+    "type": "md"
+  },
+  "31ec02c19897e4abe29d5e40c677d339deef49e3da68297d67576053754e58af": {
+    "name": "04_More_generators.md",
+    "type": "md"
+  },
+  "ded97f142f99dc1be987aef645663eb3f3f4e57d3123afdea714ad759a688a7b": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "ea8551ccbd74512efa9159b6e46dad0f324ea5d7d19fb68b69696f227df819c7": {
+    "name": "01_Variable_arguments.md",
+    "type": "md"
+  },
+  "d65470ace0cf970f8065baddb60207bea0b35bb7905c13fd45a183a542d28cf3": {
+    "name": "02_Anonymous_function.md",
+    "type": "md"
+  },
+  "8ca91db0c0a6b0399cff21a1695ad032c8bf46336314f07d266a1ae1f5fd22f3": {
+    "name": "03_Returning_functions.md",
+    "type": "md"
+  },
+  "50c59d3564b89e030d2892c4ba5eeb3d846f0a21b93b6a36228dac961987031b": {
+    "name": "04_Function_decorators.md",
+    "type": "md"
+  },
+  "da281a98722e4d8dbbc1abafe68fb7d736936d592617d8fd131784ee78ba7806": {
+    "name": "05_Decorated_methods.md",
+    "type": "md"
+  },
+  "36418f9114dafc15145e79c9b4a296427ef4b0a57bd8f9cc9dc8440894cfb352": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "5ff789265090f34b3d796ff8a8077cd73f307c2e52e95d0c2dcf732c467d397c": {
+    "name": "01_Testing.md",
+    "type": "md"
+  },
+  "55b3e83c5d290cc4be1cffb506144093431c9cad4a1839431a0de694b0e55cef": {
+    "name": "02_Logging.md",
+    "type": "md"
+  },
+  "50d4820e17a6b6c10e6e7cdfc112a07d70c336c95d84e4ae6c410534ef9762f9": {
+    "name": "03_Debugging.md",
+    "type": "md"
+  },
+  "e445e3872c735feb8dc7b8afede3629d0f33032ca63b8a082b63bf8afa97a2da": {
+    "name": "00_Overview.md",
+    "type": "md"
+  },
+  "64b2ea3cb1474589eeea814134d970bc1b8bf042ace1edb2bb11600cea50469e": {
+    "name": "01_Packages.md",
+    "type": "md"
+  },
+  "88db4a8f1899010ab66b5ac0eb495c0d187a5b328d16d161a49cd4c93217b20d": {
+    "name": "02_Third_party.md",
+    "type": "md"
+  },
+  "3fa7dd183f11ddc3c15520c54224729ba917fcbd13df2c2c952c604a3f26b89d": {
+    "name": "03_Distribution.md",
+    "type": "md"
+  },
+  "626550ab1c75285f07eed183db23a3cf29c126e8b47e735754581ee4579bee68": {
+    "name": "TheEnd.md",
+    "type": "md"
+  },
+  "63adc12a5d436be61f27f8b2ad1be08351213fe738c2cab886d1a52e2d3139c8": {
+    "name": "Contents.md",
+    "type": "md"
+  },
+  "d3f4fa55af670232abe8ca045eb62cfe6e1da0b6f0431e5453c1de434730b72d": {
+    "name": "practical-python-attribution.md",
+    "type": "md"
+  },
+  "049abb9e458cc02dfe85dc1436664fc627f07083c480bc8eb8f57529aaecef0d": {
+    "name": "01_Introduction__00_Overview.md",
+    "type": "md"
+  },
+  "7cecf0ad625adf7dab896fca313b03263b5dfd110e0e2e781444e301c7bceea5": {
+    "name": "02_Working_with_data__00_Overview.md",
+    "type": "md"
+  },
+  "c9e1671df51e151f84ace597d884970987b2d60d3ebd2cc7601f191a1fe98366": {
+    "name": "03_Program_organization__00_Overview.md",
+    "type": "md"
+  },
+  "8f14ab35af2817abb1c74d3ee64e0c747423ceb175b367cf566a9d455fec81de": {
+    "name": "04_Classes_objects__00_Overview.md",
+    "type": "md"
+  },
+  "90994299379375249d47fa6e07f2b12ac010c9dfd5a6e5e22d1f0f4bb441e84e": {
+    "name": "05_Object_model__00_Overview.md",
+    "type": "md"
+  },
+  "47666d10ff01a027303110c724985fdc8fb86768ea5aebd1f0173b1fb518c554": {
+    "name": "06_Generators__00_Overview.md",
+    "type": "md"
+  },
+  "acb15916d6f89949a11f65d70ab58fdb294bc842f089cf25f0b7ed4bd4fc7343": {
+    "name": "07_Advanced_Topics__00_Overview.md",
+    "type": "md"
+  },
+  "bbae218df242d9d01e3db7707d91d9bf0e36d9d55f429cef70bc870809561de7": {
+    "name": "08_Testing_debugging__00_Overview.md",
+    "type": "md"
+  },
+  "b4c86567134a370e82464f21e65db6316f5a8efa1e98cfb7ec3ae2d4fc1cdfc5": {
+    "name": "09_Packages__00_Overview.md",
+    "type": "md"
+  },
+  "8346dd77fb3c920e3386e67963d9844dd37eabc9ce45ac1cecc979ac1f0fe007": {
+    "name": "07_Objects.md",
+    "type": "md"
+  }
+}

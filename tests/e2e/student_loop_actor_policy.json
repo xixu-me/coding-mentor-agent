@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "actorPolicyVersion": "student-loop-actor.v1",
+  "modelBoundary": {
+    "defaultRole": "student_actor",
+    "mayDirectlyExecuteTools": false,
+    "mayAccessExternalNetwork": false,
+    "mayEditFiles": false,
+    "mayRunShell": false,
+    "evidenceTrust": "untrusted"
+  },
+  "budgets": {
+    "maxActorTurns": 8,
+    "maxActionsPerJourney": 8,
+    "maxActorOutputChars": 1200,
+    "maxRationaleChars": 240,
+    "maxMessageChars": 1400,
+    "maxTargetChars": 160
+  },
+  "outputSchema": {
+    "format": "json_object",
+    "requiredFields": ["action_id", "rationale"],
+    "optionalFields": ["message", "target", "expected_state", "confidence"],
+    "maxRationaleChars": 240,
+    "maxMessageChars": 1400
+  },
+  "promptContext": {
+    "includePersona": true,
+    "includePromptCorpusEntry": true,
+    "includeVisibleUiState": true,
+    "includeSameOriginApiState": true,
+    "includeRecentJourneyEvents": true,
+    "includeSeed": true,
+    "includeRawSecrets": false
+  },
+  "allowedActions": [
+    {
+      "id": "ask_tutor",
+      "executor": "playwright",
+      "maxPerJourney": 24,
+      "requiresMessage": true,
+      "allowedTargets": ["mentor_textarea", "send_button"]
+    },
+    {
+      "id": "answer_diagnostic",
+      "executor": "playwright",
+      "maxPerJourney": 12,
+      "requiresMessage": false,
+      "allowedTargets": ["diagnostic_choice", "submit_button"]
+    },
+    {
+      "id": "click_guidance",
+      "executor": "playwright",
+      "maxPerJourney": 2,
+      "requiresMessage": false,
+      "allowedTargets": ["guidance_button", "visible_button"]
+    },
+    {
+      "id": "ask_concept",
+      "executor": "playwright",
+      "maxPerJourney": 8,
+      "requiresMessage": true,
+      "allowedTargets": ["mentor_textarea", "send_button"]
+    },
+    {
+      "id": "answer_guided_question",
+      "executor": "playwright",
+      "maxPerJourney": 4,
+      "requiresMessage": true,
+      "allowedTargets": ["mentor_textarea", "send_button"]
+    },
+    {
+      "id": "submit_exercise",
+      "executor": "playwright",
+      "maxPerJourney": 3,
+      "requiresMessage": false,
+      "allowedTargets": ["exercise_submit_button", "visible_button"]
+    },
+    {
+      "id": "ask_progress",
+      "executor": "playwright",
+      "maxPerJourney": 3,
+      "requiresMessage": true,
+      "allowedTargets": ["mentor_textarea", "send_button", "progress_api"]
+    },
+    {
+      "id": "type",
+      "executor": "playwright",
+      "maxPerJourney": 6,
+      "requiresMessage": true,
+      "allowedTargets": ["mentor_textarea", "visible_textbox"]
+    },
+    {
+      "id": "click",
+      "executor": "playwright",
+      "maxPerJourney": 4,
+      "requiresMessage": false,
+      "allowedTargets": ["visible_button", "visible_link", "diagnostic_choice"]
+    },
+    {
+      "id": "refresh",
+      "executor": "playwright",
+      "maxPerJourney": 1,
+      "requiresMessage": false,
+      "allowedTargets": ["page"]
+    },
+    {
+      "id": "back",
+      "executor": "playwright",
+      "maxPerJourney": 1,
+      "requiresMessage": false,
+      "allowedTargets": ["page"]
+    },
+    {
+      "id": "request_practice",
+      "executor": "playwright",
+      "maxPerJourney": 1,
+      "requiresMessage": true,
+      "allowedTargets": ["mentor_textarea", "send_button", "practice_api"]
+    },
+    {
+      "id": "request_project",
+      "executor": "playwright",
+      "maxPerJourney": 1,
+      "requiresMessage": true,
+      "allowedTargets": ["mentor_textarea", "send_button", "project_api"]
+    },
+    {
+      "id": "export_check",
+      "executor": "playwright",
+      "maxPerJourney": 2,
+      "requiresMessage": false,
+      "allowedTargets": ["export_api", "backup_api"]
+    },
+    {
+      "id": "retry",
+      "executor": "playwright",
+      "maxPerJourney": 2,
+      "requiresMessage": false,
+      "allowedTargets": ["mentor_textarea", "send_button", "last_failed_action"]
+    },
+    {
+      "id": "stop",
+      "executor": "playwright",
+      "maxPerJourney": 1,
+      "requiresMessage": false,
+      "allowedTargets": ["journey"]
+    }
+  ],
+  "rejectionClasses": [
+    "malformed_actor_output",
+    "oversized_actor_output",
+    "unsupported_actor_action",
+    "unsafe_actor_target",
+    "actor_action_budget_exceeded",
+    "actor_message_budget_exceeded"
+  ]
+}

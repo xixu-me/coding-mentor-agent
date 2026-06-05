@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "coverageUniverseVersion": "student-loop-strict.v2",
+  "requiredCleanCycles": 2,
+  "maxMatrixCycles": 2,
+  "maxRepairIterations": 3,
+  "maxRuntimeMinutes": 45,
+  "stopOnHighRisk": true,
+  "allowedArtifactRoots": [
+    ".app/student-loop/runs",
+    ".app/student-loop/matrix-runs"
+  ],
+  "coverageAdequacy": {
+    "schemaVersion": 1,
+    "minimumCleanCycles": 2,
+    "closureClaimTemplate": "The student loop protocol cannot find remaining in-scope problems inside the declared coverage universe {coverageUniverseVersion}; behavior outside that universe remains unclaimed residual risk.",
+    "residualRiskStatement": "Residual risk remains for behavior outside the declared coverage universe, unbounded natural-language prompts, production services, real student data, private evaluators, hidden tests, external URLs, and browser/device combinations not listed in the adequacy model.",
+    "scenarioAxes": [
+      {
+        "id": "learner_progress_state",
+        "requiredValues": ["fresh", "partial_diagnostic", "completed_diagnostic", "exercise_attempted", "project_attempted", "completed_path"]
+      },
+      {
+        "id": "viewport_layout",
+        "requiredValues": ["desktop", "mobile"]
+      },
+      {
+        "id": "navigation_lifecycle",
+        "requiredValues": ["first_load", "refresh_recovery", "back_reload_recovery", "sse_disconnect_reconnect"]
+      },
+      {
+        "id": "network_behavior",
+        "requiredValues": ["normal", "bounded_latency", "deterministic_rate_limit", "controlled_backend_failure"]
+      },
+      {
+        "id": "local_data_state",
+        "requiredValues": ["fresh_data", "seeded_progress", "stale_local_data", "malformed_local_data", "export_backup_restore"]
+      },
+      {
+        "id": "learner_input_profile",
+        "requiredValues": ["concept_question", "debugging_question", "long_message", "prompt_injection_like_message", "pasted_code_error_text"]
+      },
+      {
+        "id": "model_behavior",
+        "requiredValues": ["normal_response", "delayed_response", "empty_or_malformed_response", "provider_unavailable"]
+      },
+      {
+        "id": "content_availability",
+        "requiredValues": ["locked_exercise", "unavailable_exercise_project", "completed_exercise_project_fixture"]
+      },
+      {
+        "id": "artifact_safety",
+        "requiredValues": ["forbidden_term_redaction", "screenshot_safety_skip", "terminal_report_sanitizer"]
+      },
+      {
+        "id": "oracle_class",
+        "requiredValues": ["unexpected_http_error", "console_error", "state_contradiction", "empty_loading_page", "controlled_expected_failure"]
+      }
+    ],
+    "highRiskPairings": [
+      {
+        "id": "prompt_injection_like_input_with_tutor_output",
+        "required": true,
+        "axisValues": {
+          "learner_input_profile": "prompt_injection_like_message",
+          "model_behavior": "provider_unavailable"
+        },
+        "scenarioIds": ["adversarial_input_profiles"]
+      },
+      {
+        "id": "malformed_data_with_export_restore",
+        "required": true,
+        "axisValues": {
+          "local_data_state": "malformed_local_data",
+          "network_behavior": "controlled_backend_failure"
+        },
+        "scenarioIds": ["recovery_data_faults"]
+      },
+      {
+        "id": "rate_limit_with_model_requests",
+        "required": true,
+        "axisValues": {
+          "network_behavior": "deterministic_rate_limit",
+          "model_behavior": "normal_response"
+        },
+        "scenarioIds": ["rate_limit_behavior"]
+      },
+      {
+        "id": "artifact_redaction_with_oracle_failures",
+        "required": true,
+        "axisValues": {
+          "artifact_safety": "forbidden_term_redaction",
+          "oracle_class": "unexpected_http_error"
+        },
+        "scenarioIds": ["artifact_oracle_safety"]
+      }
+    ],
+    "exclusions": []
+  },
+  "scenarios": [
+    {
+      "id": "default_full_journey",
+      "required": true,
+      "status": "required",
+      "learnerState": "new learner with isolated local progress data",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "normal local loopback",
+      "dataCondition": "fresh isolated APP_DATA_DIR and PROGRESS_DB_PATH",
+      "faultMode": "none",
+      "expectedOutcome": "complete the default browser-driven learning journey with no failing oracle findings",
+      "requiredEvidence": [
+        "initial_diagnostics",
+        "tutor_concept_question",
+        "debugging_student_message",
+        "locked_exercise_project_probes",
+        "data_export_backup",
+        "refresh_recovery",
+        "sse_recovery",
+        "desktop_viewport",
+        "mobile_viewport"
+      ],
+      "adequacyAxisCoverage": {
+        "learner_progress_state": ["fresh"],
+        "viewport_layout": ["desktop", "mobile"],
+        "navigation_lifecycle": ["first_load", "refresh_recovery", "sse_disconnect_reconnect"],
+        "network_behavior": ["normal"],
+        "local_data_state": ["fresh_data", "export_backup_restore"],
+        "learner_input_profile": ["concept_question", "debugging_question"],
+        "model_behavior": ["normal_response", "provider_unavailable"],
+        "content_availability": ["locked_exercise", "unavailable_exercise_project"],
+        "oracle_class": ["controlled_expected_failure"]
+      },
+      "env": {}
+    },
+    {
+      "id": "completed_paths_fixture",
+      "required": true,
+      "status": "required",
+      "learnerState": "completed diagnostic, exercise, and project fixture path",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "normal local loopback",
+      "dataCondition": "fresh isolated data plus sanitized completed-path fixture",
+      "faultMode": "deterministic fixture overlay",
+      "expectedOutcome": "record completed-path fixture evidence without exposing private content or production fallback templates",
+      "requiredEvidence": [
+        "fixture_completed_paths_optional",
+        "completed_diagnostic_state",
+        "exercise_attempted_state",
+        "project_attempted_state"
+      ],
+      "adequacyAxisCoverage": {
+        "learner_progress_state": ["completed_diagnostic", "exercise_attempted", "project_attempted", "completed_path"],
+        "local_data_state": ["seeded_progress"],
+        "content_availability": ["completed_exercise_project_fixture"]
+      },
+      "env": {
+        "STUDENT_LOOP_SCENARIO_MODE": "probe_only",
+        "STUDENT_LOOP_FIXTURE_SCENARIO": "completed_paths"
+      }
+    },
+    {
+      "id": "slow_network_behavior",
+      "required": true,
+      "status": "required",
+      "learnerState": "new learner under bounded local API latency",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "bounded 120 ms same-origin API delay",
+      "dataCondition": "fresh isolated APP_DATA_DIR and PROGRESS_DB_PATH",
+      "faultMode": "local Playwright route latency injection",
+      "expectedOutcome": "student journey remains usable and records slow-network evidence",
+      "requiredEvidence": [
+        "slow_network_behavior"
+      ],
+      "adequacyAxisCoverage": {
+        "network_behavior": ["bounded_latency"],
+        "model_behavior": ["delayed_response"]
+      },
+      "env": {
+        "STUDENT_LOOP_SCENARIO_MODE": "probe_only",
+        "STUDENT_LOOP_NETWORK_LATENCY_MS": "120"
+      }
+    },
+    {
+      "id": "rate_limit_behavior",
+      "required": true,
+      "status": "required",
+      "learnerState": "new learner with deterministic local model limiter",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "normal local loopback",
+      "dataCondition": "fresh isolated APP_DATA_DIR and PROGRESS_DB_PATH",
+      "faultMode": "bounded repeated local model requests after lowering the local model limit",
+      "expectedOutcome": "runner observes a controlled 429 RATE_LIMITED response and no failing oracle finding",
+      "requiredEvidence": [
+        "rate_limit_behavior"
+      ],
+      "adequacyAxisCoverage": {
+        "network_behavior": ["deterministic_rate_limit"],
+        "model_behavior": ["normal_response"]
+      },
+      "env": {
+        "STUDENT_LOOP_SCENARIO_MODE": "probe_only",
+        "STUDENT_LOOP_RATE_LIMIT_PROBE": "1",
+        "STUDENT_LOOP_MODEL_RATE_LIMIT_MAX": "4",
+        "STUDENT_LOOP_MODEL_RATE_LIMIT_WINDOW_MS": "60000"
+      }
+    },
+    {
+      "id": "partial_progress_states",
+      "required": true,
+      "status": "required",
+      "learnerState": "strict local probes for partial and attempted progress states",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "normal local loopback",
+      "dataCondition": "fresh isolated data plus sanitized progress-state probe fixture",
+      "faultMode": "deterministic local progress-state probe",
+      "expectedOutcome": "runner records partial diagnostic, completed diagnostic, exercise-attempted, and project-attempted evidence",
+      "requiredEvidence": [
+        "partial_diagnostic_state",
+        "completed_diagnostic_state",
+        "exercise_attempted_state",
+        "project_attempted_state"
+      ],
+      "adequacyAxisCoverage": {
+        "learner_progress_state": ["partial_diagnostic", "completed_diagnostic", "exercise_attempted", "project_attempted"],
+        "local_data_state": ["seeded_progress"]
+      },
+      "env": {
+        "STUDENT_LOOP_SCENARIO_MODE": "probe_only",
+        "STUDENT_LOOP_PROGRESS_STATE_PROBES": "1"
+      }
+    },
+    {
+      "id": "adversarial_input_profiles",
+      "required": true,
+      "status": "required",
+      "learnerState": "new learner with bounded adversarial and long input probes",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "normal local loopback",
+      "dataCondition": "fresh isolated APP_DATA_DIR and PROGRESS_DB_PATH",
+      "faultMode": "prompt-injection-like and long input profile probe",
+      "expectedOutcome": "runner records bounded long, prompt-injection-like, and pasted code/error inputs as untrusted evidence",
+      "requiredEvidence": [
+        "long_learner_message",
+        "prompt_injection_like_message",
+        "pasted_code_error_text"
+      ],
+      "adequacyAxisCoverage": {
+        "learner_input_profile": ["long_message", "prompt_injection_like_message", "pasted_code_error_text"],
+        "model_behavior": ["provider_unavailable"]
+      },
+      "env": {
+        "STUDENT_LOOP_SCENARIO_MODE": "probe_only",
+        "STUDENT_LOOP_EXTRA_INPUT_PROBES": "1"
+      }
+    },
+    {
+      "id": "model_behavior_anomalies",
+      "required": true,
+      "status": "required",
+      "learnerState": "new learner with deterministic local model anomaly probes",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "normal local loopback",
+      "dataCondition": "fresh isolated APP_DATA_DIR and PROGRESS_DB_PATH",
+      "faultMode": "local delayed, empty or malformed, and provider-unavailable model probe",
+      "expectedOutcome": "runner records controlled model anomaly evidence without external services",
+      "requiredEvidence": [
+        "delayed_model_response",
+        "empty_malformed_model_response",
+        "provider_unavailable_model"
+      ],
+      "adequacyAxisCoverage": {
+        "model_behavior": ["delayed_response", "empty_or_malformed_response", "provider_unavailable"]
+      },
+      "env": {
+        "STUDENT_LOOP_SCENARIO_MODE": "probe_only",
+        "STUDENT_LOOP_MODEL_ANOMALY_PROBES": "1"
+      }
+    },
+    {
+      "id": "recovery_data_faults",
+      "required": true,
+      "status": "required",
+      "learnerState": "new learner with recovery and local data fault probes",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "normal local loopback plus controlled backend failure",
+      "dataCondition": "fresh isolated data plus stale and malformed local data probes",
+      "faultMode": "local recovery, stale data, malformed data, and controlled backend-failure probes",
+      "expectedOutcome": "runner records back/reload recovery, controlled backend failure, stale data, malformed data, and backup/restore evidence",
+      "requiredEvidence": [
+        "back_reload_recovery",
+        "controlled_backend_failure",
+        "stale_local_data",
+        "malformed_local_data",
+        "backup_restore_behavior"
+      ],
+      "adequacyAxisCoverage": {
+        "navigation_lifecycle": ["back_reload_recovery"],
+        "network_behavior": ["controlled_backend_failure"],
+        "local_data_state": ["stale_local_data", "malformed_local_data", "export_backup_restore"]
+      },
+      "env": {
+        "STUDENT_LOOP_SCENARIO_MODE": "probe_only",
+        "STUDENT_LOOP_RECOVERY_DATA_PROBES": "1"
+      }
+    },
+    {
+      "id": "artifact_oracle_safety",
+      "required": true,
+      "status": "required",
+      "learnerState": "new learner with artifact safety and oracle classification probes",
+      "viewport": "desktop plus mobile viewport switch",
+      "networkCondition": "normal local loopback",
+      "dataCondition": "fresh isolated APP_DATA_DIR and PROGRESS_DB_PATH",
+      "faultMode": "local artifact-safety and oracle-class self probes",
+      "expectedOutcome": "runner records redaction, screenshot skip, terminal sanitizer, and oracle-class evidence without leaking forbidden terms",
+      "requiredEvidence": [
+        "forbidden_term_redaction",
+        "screenshot_safety_skip",
+        "sanitized_terminal_errors",
+        "unexpected_http_failure_oracle",
+        "console_error_oracle",
+        "state_contradiction_oracle",
+        "empty_loading_page_oracle"
+      ],
+      "adequacyAxisCoverage": {
+        "artifact_safety": ["forbidden_term_redaction", "screenshot_safety_skip", "terminal_report_sanitizer"],
+        "oracle_class": ["unexpected_http_error", "console_error", "state_contradiction", "empty_loading_page"]
+      },
+      "env": {
+        "STUDENT_LOOP_SCENARIO_MODE": "probe_only",
+        "STUDENT_LOOP_ARTIFACT_ORACLE_PROBES": "1"
+      }
+    }
+  ]
+}

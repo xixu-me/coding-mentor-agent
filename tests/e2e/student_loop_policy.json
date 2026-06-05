@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "allowedHosts": ["127.0.0.1"],
+  "allowedSchemes": ["http"],
+  "allowedDiagnosticStatuses": ["active", "in_progress", "completed", "technical_unavailable"],
+  "allowedControlledApiErrors": [
+    {
+      "method": "GET",
+      "path": "/api/exercises/next",
+      "statuses": [400, 409],
+      "codes": ["DIAGNOSTIC_REQUIRED", "EXERCISE_CONTENT_UNAVAILABLE"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects",
+      "statuses": [400],
+      "codes": ["DIAGNOSTIC_REQUIRED", "PROJECT_CONTENT_UNAVAILABLE"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/data/backups",
+      "statuses": [400],
+      "codes": ["VALIDATION_ERROR", "DATABASE_INTEGRITY_ERROR"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/sessions/{session_id}/guidance/start",
+      "statuses": [409],
+      "codes": ["DIAGNOSTIC_REQUIRED"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/sessions/{session_id}/messages",
+      "statuses": [429],
+      "codes": ["RATE_LIMITED"]
+    }
+  ],
+  "allowedRequestFailures": [
+    {
+      "method": "GET",
+      "path": "/api/sessions/{session_id}/events",
+      "failures": ["net::ERR_ABORTED"]
+    }
+  ],
+  "forbiddenReportTerms": [
+    ".env",
+    "API key",
+    "hidden tests",
+    "private evaluators",
+    "private solutions",
+    "kb/private",
+    ".git"
+  ],
+  "maxDiagnosticAnswers": 56,
+  "maxTechnicalUnavailableRetries": 3,
+  "maxRepairIterations": 3,
+  "maxEvidenceStringLength": 1200,
+  "maxEvidenceItems": 100,
+  "diagnosticTransitionTimeoutMs": 60000,
+  "scenarioCoverage": {
+    "initial_diagnostics": { "status": "executed", "reason": "Runner answers bounded diagnostic questions or records controlled technical_unavailable state." },
+    "tutor_concept_question": { "status": "executed", "reason": "Runner asks a concept explanation question through the rendered UI." },
+    "debugging_student_message": { "status": "executed", "reason": "Runner asks a debugging-style Python SyntaxError question through the rendered UI." },
+    "locked_exercise_project_probes": { "status": "executed", "reason": "Runner probes locked exercise and project APIs before prerequisites are met." },
+    "data_export_backup": { "status": "executed", "reason": "Runner checks export and encrypted backup API behavior." },
+    "refresh_recovery": { "status": "executed", "reason": "Runner reloads the page and verifies session recovery." },
+    "sse_recovery": { "status": "executed", "reason": "Runner observes local SSE lifecycle failures through policy-governed request failure classification." },
+    "desktop_viewport": { "status": "executed", "reason": "Runner starts with a desktop browser viewport." },
+    "mobile_viewport": { "status": "executed", "reason": "Runner switches to a mobile viewport and verifies core controls." },
+    "fixture_completed_paths_optional": { "status": "planned", "reason": "Enabled only when STUDENT_LOOP_FIXTURE_SCENARIO=completed_paths." },
+    "slow_network_behavior": { "status": "planned", "reason": "Bounded local throttling scenario is planned; current runner records this explicitly instead of implying execution." },
+    "rate_limit_behavior": { "status": "planned", "reason": "Bounded local rate-limit scenario is planned; existing API unit tests cover rate-limit enforcement." },
+    "partial_diagnostic_state": { "status": "planned", "reason": "Strict progress-state scenario enables a deterministic local partial diagnostic probe." },
+    "completed_diagnostic_state": { "status": "planned", "reason": "Strict progress-state or completed-path scenarios enable deterministic completed diagnostic evidence." },
+    "exercise_attempted_state": { "status": "planned", "reason": "Strict progress-state or completed-path scenarios enable deterministic exercise-attempted evidence." },
+    "project_attempted_state": { "status": "planned", "reason": "Strict progress-state or completed-path scenarios enable deterministic project-attempted evidence." },
+    "long_learner_message": { "status": "planned", "reason": "Strict adversarial input scenario sends a bounded long learner message through the rendered UI." },
+    "prompt_injection_like_message": { "status": "planned", "reason": "Strict adversarial input scenario treats prompt-injection-like text as untrusted learner evidence." },
+    "pasted_code_error_text": { "status": "planned", "reason": "Strict adversarial input scenario sends pasted code and error text through the rendered UI." },
+    "delayed_model_response": { "status": "planned", "reason": "Strict model anomaly scenario records bounded local delayed-response evidence." },
+    "empty_malformed_model_response": { "status": "planned", "reason": "Strict model anomaly scenario records empty or malformed model-output handling evidence." },
+    "provider_unavailable_model": { "status": "planned", "reason": "Strict model anomaly scenario records controlled provider-unavailable tutor behavior." },
+    "back_reload_recovery": { "status": "planned", "reason": "Strict recovery scenario exercises same-origin back or reload recovery." },
+    "controlled_backend_failure": { "status": "planned", "reason": "Strict recovery scenario records an allowlisted controlled backend failure." },
+    "stale_local_data": { "status": "planned", "reason": "Strict recovery scenario records stale local data handling evidence." },
+    "malformed_local_data": { "status": "planned", "reason": "Strict recovery scenario records malformed local data handling evidence." },
+    "backup_restore_behavior": { "status": "planned", "reason": "Strict recovery scenario records backup or restore path evidence." },
+    "forbidden_term_redaction": { "status": "planned", "reason": "Strict artifact-oracle scenario verifies forbidden-term redaction." },
+    "screenshot_safety_skip": { "status": "planned", "reason": "Strict artifact-oracle scenario writes a sanitized screenshot skip note." },
+    "sanitized_terminal_errors": { "status": "planned", "reason": "Strict artifact-oracle scenario verifies terminal-facing error sanitization." },
+    "unexpected_http_failure_oracle": { "status": "planned", "reason": "Strict artifact-oracle scenario validates unexpected HTTP failure classification." },
+    "console_error_oracle": { "status": "planned", "reason": "Strict artifact-oracle scenario validates console error classification." },
+    "state_contradiction_oracle": { "status": "planned", "reason": "Strict artifact-oracle scenario validates state contradiction classification." },
+    "empty_loading_page_oracle": { "status": "planned", "reason": "Strict artifact-oracle scenario validates empty or loading page classification." }
+  },
+  "expectedUnavailableCodes": [
+    "DIAGNOSTIC_REQUIRED",
+    "EXERCISE_CONTENT_UNAVAILABLE",
+    "PROJECT_CONTENT_UNAVAILABLE",
+    "technical_unavailable"
+  ],
+  "fixtureScenarios": [
+    {
+      "name": "completed_paths",
+      "description": "Optional sanitized fixture path for completed diagnostic plus exercise/project states; disabled unless STUDENT_LOOP_FIXTURE_SCENARIO=completed_paths."
+    }
+  ]
+}

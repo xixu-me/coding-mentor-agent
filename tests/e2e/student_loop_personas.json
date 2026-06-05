@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "personas": [
+    {
+      "id": "novice-loop",
+      "required": true,
+      "learnerLevel": "zero_beginner",
+      "goals": ["understand basic Python syntax", "get step-by-step explanations"],
+      "likelyMistakes": ["confuses colon placement", "asks repeated concept questions"],
+      "inputProfileTags": ["concept", "follow_up", "mixed_language"],
+      "actionBudget": 5,
+      "stopConditions": ["max_actions_reached", "blocking_oracle_finding", "journey_clean"]
+    },
+    {
+      "id": "careless-debugger",
+      "required": true,
+      "learnerLevel": "beginner",
+      "goals": ["paste failing code", "understand syntax errors"],
+      "likelyMistakes": ["missing colon", "wrong indentation", "pastes traceback text"],
+      "inputProfileTags": ["debugging", "traceback", "code_block"],
+      "actionBudget": 5,
+      "stopConditions": ["max_actions_reached", "blocking_oracle_finding", "journey_clean"]
+    },
+    {
+      "id": "impatient-skipper",
+      "required": true,
+      "learnerLevel": "unknown",
+      "goals": ["skip to practice", "ask for direct answers"],
+      "likelyMistakes": ["tries locked practice early", "repeats requests quickly"],
+      "inputProfileTags": ["practice_request", "hidden_answer", "prompt_injection"],
+      "actionBudget": 6,
+      "stopConditions": ["max_actions_reached", "blocking_oracle_finding", "journey_clean"]
+    },
+    {
+      "id": "advanced-project-seeker",
+      "required": true,
+      "learnerLevel": "intermediate",
+      "goals": ["request a project", "connect concepts to a practical task"],
+      "likelyMistakes": ["asks for project before prerequisite state is ready", "requests oversized scope"],
+      "inputProfileTags": ["project_request", "concept", "long_message"],
+      "actionBudget": 5,
+      "stopConditions": ["max_actions_reached", "blocking_oracle_finding", "journey_clean"]
+    },
+    {
+      "id": "lost-progress-checker",
+      "required": true,
+      "learnerLevel": "beginner",
+      "goals": ["understand current progress", "recover after refresh"],
+      "likelyMistakes": ["asks where to continue", "navigates back and refreshes"],
+      "inputProfileTags": ["progress_query", "follow_up", "refresh_recovery"],
+      "actionBudget": 5,
+      "stopConditions": ["max_actions_reached", "blocking_oracle_finding", "journey_clean"]
+    }
+  ]
+}

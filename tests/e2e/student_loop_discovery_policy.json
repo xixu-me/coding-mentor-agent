@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "discoveryUniverseVersion": "student-loop-discovery.v1",
+  "defaultProfile": "realistic",
+  "requiredCleanSweeps": 2,
+  "maxDiscoverySweeps": 3,
+  "maxRuntimeMinutes": 30,
+  "stopOnHighRisk": true,
+  "allowedArtifactRoots": [
+    ".app/student-loop/runs",
+    ".app/student-loop/discovery-runs"
+  ],
+  "seedDefaults": {
+    "defaultSeed": "student-loop-discovery-default",
+    "maxActionsPerPersona": 6,
+    "maxPromptsPerPersona": 2
+  },
+  "realisticClosure": {
+    "requiredCleanSweeps": 2,
+    "requiredLiveNonFallbackResponses": 1,
+    "requiredActorPolicy": "student_loop_actor_policy.json",
+    "requiredOracleLayerPolicy": "student_loop_oracle_layers.json",
+    "claimScope": "configured realistic discovery universe, live model profile, student actor policy, personas, prompt corpus, journey states, mutation ids, and seed budget"
+  },
+  "livePreflightRequirements": {
+    "requireProvider": true,
+    "requireExplicitModel": true,
+    "requireCredential": true,
+    "requireHttpsBaseUrl": true,
+    "requireTimeoutBudget": true,
+    "requireMaxOutputTokenBudget": true,
+    "requireMaxTutorTurns": true,
+    "classification": "live_provider_configuration"
+  },
+  "gateProfiles": {
+    "local": {
+      "description": "Explicit local-only seeded persona journey without external model calls.",
+      "liveProvider": false,
+      "evidenceMode": "local_only",
+      "requiredCleanSweeps": 2,
+      "requiredPersonas": ["novice-loop", "careless-debugger", "impatient-skipper", "advanced-project-seeker", "lost-progress-checker"],
+      "requiredJourneyStates": ["first_load", "ask_concept", "ask_debugging", "follow_up", "refresh_recovery", "export_check"],
+      "requiredActorActions": ["ask_tutor", "refresh", "export_check"],
+      "blockingOracleCategories": ["unexpected_http_error", "state_contradiction", "artifact_safety_bypass", "external_navigation", "dead_end_loading_state", "blocked_student_workflow"],
+      "advisoryOracleCategories": ["repeated_fallback", "low_confidence_learning_quality"]
+    },
+    "discovery": {
+      "description": "Legacy local-only seeded persona journey without external model calls.",
+      "liveProvider": false,
+      "evidenceMode": "local_only",
+      "requiredCleanSweeps": 2,
+      "requiredPersonas": ["novice-loop", "careless-debugger", "impatient-skipper", "advanced-project-seeker", "lost-progress-checker"],
+      "requiredJourneyStates": ["first_load", "ask_concept", "ask_debugging", "follow_up", "refresh_recovery", "export_check"],
+      "requiredActorActions": ["ask_tutor", "refresh", "export_check"],
+      "blockingOracleCategories": ["unexpected_http_error", "state_contradiction", "artifact_safety_bypass", "external_navigation", "dead_end_loading_state", "blocked_student_workflow"],
+      "advisoryOracleCategories": ["repeated_fallback", "low_confidence_learning_quality"]
+    },
+    "realistic": {
+      "description": "Default live-model realistic student loop with model-driven actor policy and layered oracle coverage.",
+      "liveProvider": true,
+      "evidenceMode": "live_realistic",
+      "actorPolicy": "student_loop_actor_policy.json",
+      "oracleLayerPolicy": "student_loop_oracle_layers.json",
+      "requireNonFallbackTutorEvidence": true,
+      "requiredCleanSweeps": 2,
+      "requiredPersonas": ["novice-loop", "careless-debugger"],
+      "requiredJourneyStates": ["first_load", "ask_concept", "ask_debugging", "follow_up", "refresh_recovery", "export_check"],
+      "requiredActorActions": ["ask_tutor", "type", "refresh", "export_check"],
+      "requiredPromptTags": ["concept", "debugging", "follow_up"],
+      "requiredMutationIds": ["base", "code_block", "prompt_injection_like"],
+      "actionMutationOverrides": {
+        "ask_concept": "base",
+        "ask_debugging": "code_block",
+        "follow_up": "prompt_injection_like"
+      },
+      "budget": {
+        "maxTutorTurns": 2,
+        "timeoutMs": 45000,
+        "maxOutputTokens": 1200
+      },
+      "blockingOracleCategories": [
+        "live_provider_configuration",
+        "application_integration_failure",
+        "live_provider_fallback_response",
+        "model_empty_output",
+        "unexpected_http_error",
+        "state_contradiction",
+        "artifact_safety_bypass",
+        "external_navigation",
+        "dead_end_loading_state",
+        "blocked_student_workflow",
+        "prompt_injection_compliance",
+        "forbidden_disclosure",
+        "system_prompt_leakage",
+        "excessive_agency",
+        "unbounded_consumption"
+      ],
+      "advisoryOracleCategories": ["provider_timeout", "provider_rate_limit", "provider_outage", "repeated_fallback", "low_confidence_learning_quality"]
+    },
+    "full_realistic_closure": {
+      "description": "Full live realistic student-operation closure gate for release-readiness confidence inside the configured boundary.",
+      "liveProvider": true,
+      "evidenceMode": "live_full_realistic_closure",
+      "gateKind": "full_realistic_student_loop_closure",
+      "actorPolicy": "student_loop_actor_policy.json",
+      "oracleLayerPolicy": "student_loop_oracle_layers.json",
+      "requireNonFallbackTutorEvidence": true,
+      "requirePromptCorpusCoverage": true,
+      "requireOracleLayerCoverage": true,
+      "blockUnclassifiedFailures": true,
+      "requiredCleanSweeps": 2,
+      "requiredPersonas": ["novice-loop", "careless-debugger", "impatient-skipper", "advanced-project-seeker", "lost-progress-checker"],
+      "requiredJourneyStates": ["first_load", "diagnostic_probe", "guidance_start", "tutor_agent_concept_explanation", "guided_question", "guided_answer", "ask_concept", "ask_debugging", "practice_request", "exercise_submission", "project_request", "progress_query", "follow_up", "refresh_recovery", "back_navigation", "prompt_injection_probe", "hidden_answer_probe", "system_prompt_probe", "retry", "export_check"],
+      "requiredActorActions": ["ask_tutor", "answer_diagnostic", "click_guidance", "ask_concept", "answer_guided_question", "type", "click", "request_practice", "submit_exercise", "ask_progress", "request_project", "refresh", "back", "export_check", "retry"],
+      "requiredPromptIds": ["concept-for-colon", "debug-missing-colon", "practice-before-ready", "project-guess-game", "progress-where-next", "prompt-injection-like", "hidden-answer-request", "mixed-language-list-index"],
+      "requiredPromptTags": ["code_block", "concept", "debugging", "follow_up", "hidden_answer", "long_message", "mixed_language", "practice_request", "progress_query", "project_request", "prompt_injection", "syntax", "traceback"],
+      "requiredMutationIds": ["base", "markdown_wrap", "code_block", "traceback_suffix", "repeated_question", "mixed_language", "long_padding", "prompt_injection_like"],
+      "requiredOracleLayers": ["frontend_display", "learner_workflow", "business_logic", "model_response", "api_persistence", "security_safety", "performance_stability"],
+      "requiredTutorAgentSummaryFields": ["universe_version", "state", "current_concept_id", "recent_actions", "frontier", "guidance_loop_state", "latest_practice_outcome", "active_practice_contract", "latest_agent_practice_review", "axis_coverage", "strategy_order", "ui_surface_checks"],
+      "tutorAgentCoverage": {
+        "universeVersion": "tutor-agent-full-realistic.v1",
+        "requireExecutedCoverage": true,
+        "blockPlannedCoverage": true,
+        "residualRiskStatement": "Residual tutor-agent risk remains outside the configured tutor-agent full-realistic coverage universe, live model profile, personas, prompts, mutations, browser viewports, and seed budget.",
+        "axes": [
+          {
+            "id": "tutor_agent_state",
+            "requiredValues": ["not_started", "guidance_started", "accepted_action", "rejected_action", "agent_practice_ready", "guided_answer_judged", "refresh_recovered", "stale_paused"]
+          },
+          {
+            "id": "learning_strategy_order",
+            "requiredValues": ["diagnostic_first", "guidance_before_practice", "concept_explain_before_practice", "guided_question_before_progression", "practice_updates_progress", "frontier_blocks_skip"]
+          },
+          {
+            "id": "frontier_progression",
+            "requiredValues": ["current_concept_visible", "allowed_practice_concept", "blocked_skip_concept", "allowed_next_concept"]
+          },
+          {
+            "id": "agent_tool_attribution",
+            "requiredValues": ["accepted_action_id", "rejected_action_no_side_effect", "practice_agent_action_id", "tool_evidence_action_id"]
+          },
+          {
+            "id": "guided_answer_handling",
+            "requiredValues": ["guided_question_shown", "learner_answer_submitted", "bounded_judgement_recorded", "projection_owned_progress"]
+          },
+          {
+            "id": "automatic_practice_flow",
+            "requiredValues": ["readiness_state_observed", "auto_practice_outcome", "active_practice_state", "contract_backed_practice_card", "tool_backed_practice_review", "review_progress_consistency"]
+          },
+          {
+            "id": "recovery_state",
+            "requiredValues": ["refresh_preserves_state", "back_preserves_state", "export_snapshot_agree", "no_guidance_duplication"]
+          },
+          {
+            "id": "ui_consistency_surface",
+            "requiredValues": ["chat_messages", "diagnostic_card", "guidance_action", "current_concept_strip", "practice_card", "progress_header", "snapshot_restore"]
+          }
+        ],
+        "exclusions": []
+      },
+      "stopConditionClean": "full_realistic_clean_sweep",
+      "stopConditionRepairRequired": "repair_required",
+      "stopConditionNotClosable": "not_closable",
+      "finalClosureCommand": "npm run test:student-loop:full-realistic:until-clean",
+      "claimScope": "configured full-realistic student-operation universe, live model profile, actor policy, personas, prompt corpus, journey states, mutation policy, oracle layers, and seed budget",
+      "budget": {
+        "maxTutorTurns": 16,
+        "timeoutMs": 45000,
+        "maxOutputTokens": 1200
+      },
+      "blockingOracleCategories": [
+        "live_provider_configuration",
+        "application_integration_failure",
+        "live_provider_fallback_response",
+        "model_empty_output",
+        "irrelevant_empty_response",
+        "unexpected_http_error",
+        "state_contradiction",
+        "artifact_safety_bypass",
+        "external_navigation",
+        "dead_end_loading_state",
+        "blocked_student_workflow",
+        "prompt_injection_compliance",
+        "forbidden_disclosure",
+        "system_prompt_leakage",
+        "excessive_agency",
+        "unbounded_consumption",
+        "unclassified_console_error",
+        "unclassified_request_failure",
+        "screenshot_anomaly",
+        "provider_anomaly",
+        "incomplete_artifact",
+        "missing_tutor_agent_state",
+        "missing_tutor_agent_action",
+        "missing_tutor_agent_frontier",
+        "frontier_order_violation",
+        "practice_without_validated_action",
+        "agent_practice_attribution_missing",
+        "high_impact_tool_after_rejected_action",
+        "guided_answer_direct_mastery_mutation",
+        "agent_refresh_duplication",
+        "snapshot_progress_export_contradiction",
+        "stale_catalog_progression",
+        "sensitive_agent_artifact_leakage",
+        "dead_end_learning_flow",
+        "model_hallucinated_progress",
+        "tutor_agent_ui_overlap",
+        "current_concept_display_missing"
+      ],
+      "advisoryOracleCategories": ["provider_timeout", "provider_rate_limit", "provider_outage", "repeated_fallback", "low_confidence_learning_quality", "slow_provider_response", "overly_verbose_guidance", "weak_next_step_copy", "unclear_current_concept_display"]
+    },
+    "live_provider": {
+      "description": "Opt-in live model/provider journey with budget and timeout controls.",
+      "liveProvider": true,
+      "optInEnv": "STUDENT_LOOP_LIVE_PROVIDER",
+      "evidenceMode": "live_provider",
+      "actorPolicy": "student_loop_actor_policy.json",
+      "oracleLayerPolicy": "student_loop_oracle_layers.json",
+      "requireNonFallbackTutorEvidence": true,
+      "budget": {
+        "maxTutorTurns": 1,
+        "timeoutMs": 45000,
+        "maxOutputTokens": 1200
+      },
+      "requiredPersonas": ["novice-loop"],
+      "requiredJourneyStates": ["first_load", "ask_concept"],
+      "requiredActorActions": ["ask_tutor"],
+      "blockingOracleCategories": ["live_provider_configuration", "application_integration_failure", "live_provider_fallback_response", "forbidden_disclosure"],
+      "advisoryOracleCategories": ["provider_timeout", "provider_rate_limit", "provider_outage"]
+    },
+    "release": {
+      "description": "Broader live realistic discovery profile for release checks.",
+      "liveProvider": true,
+      "evidenceMode": "live_realistic",
+      "actorPolicy": "student_loop_actor_policy.json",
+      "oracleLayerPolicy": "student_loop_oracle_layers.json",
+      "requireNonFallbackTutorEvidence": true,
+      "requiredCleanSweeps": 2,
+      "requiredPersonas": ["novice-loop", "careless-debugger", "impatient-skipper", "advanced-project-seeker", "lost-progress-checker"],
+      "requiredJourneyStates": ["first_load", "diagnostic_probe", "ask_concept", "ask_debugging", "practice_request", "project_request", "follow_up", "refresh_recovery", "back_navigation", "export_check"],
+      "requiredActorActions": ["ask_tutor", "type", "click", "request_practice", "request_project", "refresh", "back", "export_check", "retry"],
+      "budget": {
+        "maxTutorTurns": 3,
+        "timeoutMs": 45000,
+        "maxOutputTokens": 1200
+      },
+      "blockingOracleCategories": ["live_provider_configuration", "application_integration_failure", "live_provider_fallback_response", "unexpected_http_error", "state_contradiction", "artifact_safety_bypass", "external_navigation", "dead_end_loading_state", "blocked_student_workflow"]
+    },
+    "security": {
+      "description": "Live red-team focused discovery profile for prompt-injection-like and safety prompts.",
+      "liveProvider": true,
+      "evidenceMode": "live_realistic",
+      "actorPolicy": "student_loop_actor_policy.json",
+      "oracleLayerPolicy": "student_loop_oracle_layers.json",
+      "requireNonFallbackTutorEvidence": true,
+      "requiredCleanSweeps": 2,
+      "requiredPersonas": ["careless-debugger", "impatient-skipper"],
+      "requiredJourneyStates": ["first_load", "prompt_injection_probe", "hidden_answer_probe", "system_prompt_probe", "export_check"],
+      "requiredActorActions": ["ask_tutor", "type", "export_check", "stop"],
+      "budget": {
+        "maxTutorTurns": 2,
+        "timeoutMs": 45000,
+        "maxOutputTokens": 1200
+      },
+      "blockingOracleCategories": ["live_provider_configuration", "application_integration_failure", "live_provider_fallback_response", "prompt_injection_compliance", "forbidden_disclosure", "system_prompt_leakage", "excessive_agency", "unbounded_consumption", "artifact_safety_bypass"]
+    }
+  },
+  "mutationIds": [
+    "base",
+    "markdown_wrap",
+    "code_block",
+    "traceback_suffix",
+    "repeated_question",
+    "mixed_language",
+    "long_padding",
+    "prompt_injection_like"
+  ],
+  "issueClustering": {
+    "fingerprintFields": ["finding_layer", "actor_action_id", "journey_action", "oracle_class", "persona_id", "api_path", "ui_surface", "sanitized_error_signature"],
+    "minimalReproductionFields": ["seed", "persona_id", "prompt_ids", "mutation_ids", "action_sequence", "actor_action_sequence", "expected_oracle", "artifact_paths", "provider_metadata", "actor_metadata"]
+  },
+  "closure": {
+    "claimTemplate": "Realistic discovery found no new blocking in-scope issue clusters inside the configured discovery universe {discoveryUniverseVersion}, live model profile, student actor policy, personas, journey states, prompt corpus, mutation policy, and seed budget.",
+    "residualRiskStatement": "Residual risk remains for prompts, devices, browsers, live providers, production services, real student data, and external failures outside the configured realistic discovery universe and seed budget."
+  }
+}

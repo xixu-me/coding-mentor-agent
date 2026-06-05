@@ -1,0 +1,17 @@
+{
+  "diagnostic": {
+    "completed": true,
+    "diagnostic_status": "completed",
+    "answered": 6,
+    "starting_level": "入门"
+  },
+  "exercise": {
+    "state": "available_after_explicit_request",
+    "public_tests_visible": false,
+    "private_evaluator_visible": false
+  },
+  "project": {
+    "state": "controlled_unavailable_or_available",
+    "allowed_unavailable_code": "PROJECT_CONTENT_UNAVAILABLE"
+  }
+}

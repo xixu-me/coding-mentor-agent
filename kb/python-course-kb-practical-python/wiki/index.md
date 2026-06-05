@@ -1,0 +1,300 @@
+# Practical Python Programming KB
+
+Attribution and license: [[summaries/practical-python-attribution]] — course-derived content and license notes.
+
+Runtime note: 本 KB 保留课程原始 Python 3.6 历史基线；新学习环境应使用仍受官方维护的 Python 3.x 版本，详见 [[summaries/00_Setup]]。
+
+## Documents
+
+- [[summaries/00_Overview]] — 本文是 Practical Python Programming 知识库的课程总览。; type: short; source: sources/Contents.md
+- [[summaries/00_Setup]] — 本文是 Practical Python Programming 课程的设置与概览说明，主要介绍课程所需时间、Python 环境要求、仓库准备方式、目录结构、学习顺序以及解答代码的使用建议。; type: short; source: sources/00_Setup.md
+- [[summaries/01_Class]] — 本文介绍 Python 中 `class` 语句的基本用法，以及如何通过类创建新的对象。; type: short; source: sources/01_Class.md
+- [[summaries/01_Datatypes]] — 本文介绍 Python 中用于表示和组织数据的基本方式，重点包括 `None`、元组（tuple）和字典（dictionary），并通过读取 `portfolio.csv` 中股票持仓数据的…; type: short; source: sources/01_Datatypes.md
+- [[summaries/01_Dicts_revisited]] — 本文重新审视 Python 字典，说明 Python 的模块、对象、类、继承和方法调用机制在很大程度上都建立在字典之上。; type: short; source: sources/01_Dicts_revisited.md
+- [[summaries/01_Introduction__00_Overview]] — 本文档是 Python 入门部分的总览页，说明第一章的学习目标与章节结构。; type: short; source: sources/01_Introduction__00_Overview.md
+- [[summaries/01_Iteration_protocol]] — 本文介绍 Python 中无处不在的 Python迭代协议，解释 `for` 循环背后的底层机制，并通过 `Portfolio` 示例说明如何让自定义对象表现得像标准容器。; type: short; source: sources/01_Iteration_protocol.md
+- [[summaries/01_Packages]] — 本文介绍如何把一组 Python 模块组织成包（package），以及包化后在导入、脚本运行和应用目录结构上的关键变化。; type: short; source: sources/01_Packages.md
+- [[summaries/01_Python]] — 本文是课程的 Python 入门开篇，介绍了 Python 的基本定位、获取方式、诞生背景，以及为什么应当从 命令行与终端 中学习和使用 Python。; type: short; source: sources/01_Python.md
+- [[summaries/01_Script]] — 本文讲解 Python 脚本的基本组织方式，并强调随着脚本功能增长，应尽早用函数重构程序，以提升模块化编程、可读性、可复用性和可维护性。; type: short; source: sources/01_Script.md
+- [[summaries/01_Testing]] — 本文介绍 Python 中测试的基本思想与实践方式，强调动态语言缺少编译期检查，因此需要通过运行代码和系统化测试来发现问题。; type: short; source: sources/01_Testing.md
+- [[summaries/01_Variable_arguments]] — 本文讲解 Python 函数中的可变参数机制，包括位置可变参数 `*args`、关键字可变参数 `**kwargs`，以及如何用 `*` 和 `**` 将元组、字典展开为函数调用参数。; type: short; source: sources/01_Variable_arguments.md
+- [[summaries/02_Anonymous_function]] — 本文讲解 Python 中的匿名函数 `lambda`，重点说明它如何作为 `sort()` 的 `key` 回调函数，用于按自定义字段对列表元素排序。; type: short; source: sources/02_Anonymous_function.md
+- [[summaries/02_Classes_encapsulation]] — 本文介绍 Python 中类与对象的封装方式，重点说明公共接口与内部实现的区别，以及 Python 如何通过命名约定、属性管理、`property` 和 `__slots__` 来实现较弱但…; type: short; source: sources/02_Classes_encapsulation.md
+- [[summaries/02_Containers]] — 本文介绍 Python 中三类核心Python容器：列表、字典和集合，并通过股票投资组合与价格数据的读取练习，展示如何选择合适的数据结构来组织、查询和计算数据。; type: short; source: sources/02_Containers.md
+- [[summaries/02_Customizing_iteration]] — 本文介绍如何用生成器函数自定义 Python 的迭代行为。; type: short; source: sources/02_Customizing_iteration.md
+- [[summaries/02_Hello_world]] — 本文是 Python 入门课程的第一个实践程序章节，围绕如何运行解释器、使用交互式 REPL、创建并执行 `.py` 文件，以及理解最基础的 Python 语法结构展开。; type: short; source: sources/02_Hello_world.md
+- [[summaries/02_Inheritance]] — 本文介绍 Python 中的继承机制，以及如何用继承编写可扩展、可定制的程序。; type: short; source: sources/02_Inheritance.md
+- [[summaries/02_Logging]] — 本文介绍 Python 标准库中的 `logging` 模块，说明如何用日志替代直接 `print()` 或静默忽略异常，从而让诊断信息的输出方式、详细程度和目的地变得可配置。; type: short; source: sources/02_Logging.md
+- [[summaries/02_More_functions]] — 本文深入讲解 Python 函数的调用方式、默认参数、返回值、作用域、参数传递语义，并通过一系列练习逐步构建一个通用的 CSV 文件解析函数 `parse_csv()`。; type: short; source: sources/02_More_functions.md
+- [[summaries/02_Third_party]] — 本文介绍 Python 第三方模块的基本使用背景：Python 自带大量标准库模块，但更丰富的生态来自第三方模块，通常可通过 PyPI 或搜索引擎查找。; type: short; source: sources/02_Third_party.md
+- [[summaries/02_Working_with_data__00_Overview]] — 本页是《Working With Data》章节的总览，说明编写实用 Python 程序需要掌握如何处理数据，并给出本章的学习路径。; type: short; source: sources/02_Working_with_data__00_Overview.md
+- [[summaries/03_Debugging]] — 本文讲解 Python 程序崩溃后的基础调试方法，重点包括如何阅读 traceback、使用交互式解释器保留现场、用 `print()` 辅助排查，以及通过 Python 内置调试器 `pd…; type: short; source: sources/03_Debugging.md
+- [[summaries/03_Distribution]] — 本文介绍 Python 项目分发的最基础流程：通过 `setup.py` 描述项目元数据与包结构，通过 `MANIFEST.in` 声明额外文件，使用 `python setup.py sd…; type: short; source: sources/03_Distribution.md
+- [[summaries/03_Error_checking]] — 本文补充说明 Python 中的错误检查与异常处理机制，重点包括：Python 的运行时错误模型、异常的抛出与捕获、异常传播、捕获范围控制、重新抛出、`finally` 与 `with` 的…; type: short; source: sources/03_Error_checking.md
+- [[summaries/03_Formatting]] — 本文讲解 Python 中用于生成结构化文本输出的字符串格式化技术，重点服务于数据处理场景中的表格输出，例如股票投资组合报表。; type: short; source: sources/03_Formatting.md
+- [[summaries/03_Numbers]] — 本文是 Practical Python 第 1.3 节，围绕 Python 中的数字计算展开，介绍数字类型、常见算术与比较运算、类型转换，并通过按揭贷款程序练习巩固循环、累计和数值计算。; type: short; source: sources/03_Numbers.md
+- [[summaries/03_Producers_consumers]] — 本文讲解如何利用 Python 生成器 组织生产者-消费者问题，并把多个处理步骤串联成惰性执行的 [[concepts/数据流管道]]。; type: short; source: sources/03_Producers_consumers.md
+- [[summaries/03_Program_organization__00_Overview]] — 本文是第 3 章“Program Organization”的导览页，承接前面关于 Python 基础与数据处理的内容，说明当程序从短脚本发展为较大项目时，需要更系统的组织方式。; type: short; source: sources/03_Program_organization__00_Overview.md
+- [[summaries/03_Returning_functions]] — 本文介绍 Python 中“函数返回函数”的模式，并由此引出 闭包 的概念。; type: short; source: sources/03_Returning_functions.md
+- [[summaries/03_Special_methods]] — 本文介绍 Python 类中用于定制对象行为的“特殊方法”（special methods / magic methods），并说明字符串表示、运算符重载、容器协议、方法调用过程、绑定方法以…; type: short; source: sources/03_Special_methods.md
+- [[summaries/04_Classes_objects__00_Overview]] — 本页是第 4 章“Classes and Objects”的总览，标志着课程从使用 Python 内置数据类型，进入到自定义对象与面向对象编程的阶段。; type: short; source: sources/04_Classes_objects__00_Overview.md
+- [[summaries/04_Defining_exceptions]] — 本文介绍 Python 中如何定义用户自定义异常，以及为什么库代码应使用专用异常来表达特定的使用错误。; type: short; source: sources/04_Defining_exceptions.md
+- [[summaries/04_Function_decorators]] — 本文介绍 Python 中的函数装饰器（function decorators），说明它们如何从“为多个函数重复添加相同逻辑”的需求中自然产生，并通过日志与计时示例展示装饰器的基本实现方式。; type: short; source: sources/04_Function_decorators.md
+- [[summaries/04_Modules]] — 本文介绍 Python 中的Python模块：任何 `.py` 源文件都是一个模块；模块通过 `import` 加载和执行，并形成独立的命名空间。; type: short; source: sources/04_Modules.md
+- [[summaries/04_More_generators]] — 本节继续扩展 Python generator 相关主题，重点介绍generator expression、生成器的设计价值，以及标准库 itertools 中常见的迭代工具。; type: short; source: sources/04_More_generators.md
+- [[summaries/04_Sequences]] — 本文介绍 Python 中的Python序列及其常见操作，包括字符串、列表、元组、切片、循环遍历、`range()`、`enumerate()`、元组解包与 `zip()`。; type: short; source: sources/04_Sequences.md
+- [[summaries/04_Strings]] — 本文介绍 Python 中用于处理文本的核心类型 `str`，涵盖字符串字面量、转义字符、Unicode 表示、索引与切片、常用操作和方法、不可变性、类型转换、字节串、原始字符串、f-str…; type: short; source: sources/04_Strings.md
+- [[summaries/05_Collections]] — 本文介绍 Python 标准库 `collections` 模块中几个常用的数据处理工具，重点包括 `Counter`、`defaultdict` 和 `deque`，展示它们如何简化计数、…; type: short; source: sources/05_Collections.md
+- [[summaries/05_Decorated_methods]] — 本文介绍 Python 类定义中常见的内置方法装饰器，说明它们如何改变方法与实例、类之间的绑定关系，并通过练习展示如何用 `@classmethod` 改进对象构造逻辑。; type: short; source: sources/05_Decorated_methods.md
+- [[summaries/05_Lists]] — 本文介绍 Python列表：Python 中用于保存有序值集合的主要数据类型。; type: short; source: sources/05_Lists.md
+- [[summaries/05_Main_module]] — 本文介绍 Python 中“主程序/主模块”的概念，以及如何把模块组织成可导入、可执行的命令行脚本。; type: short; source: sources/05_Main_module.md
+- [[summaries/05_Object_model__00_Overview]] — 本页是第 5 章“Python 对象内部机制”的导览，说明本章将从实现角度解释 Python 对象与类的工作方式，并介绍更好组织和封装对象内部状态的常见惯用法。; type: short; source: sources/05_Object_model__00_Overview.md
+- [[summaries/06_Design_discussion]] — 本文讨论一个重要的库函数设计选择：函数参数应该接收“文件名”，还是接收“可迭代的行对象”。; type: short; source: sources/06_Design_discussion.md
+- [[summaries/06_Files]] — 本文介绍 Python 中的基础文件管理，包括如何打开、读取、写入和关闭文件，以及在实际数据处理任务中逐行读取文本文件的方法。; type: short; source: sources/06_Files.md
+- [[summaries/06_Generators__00_Overview]] — 本文件是第 6 章「Generators」的总览页，介绍 Python 中生成器相关主题的学习路线。; type: short; source: sources/06_Generators__00_Overview.md
+- [[summaries/06_List_comprehension]] — 本文介绍 Python 中的列表推导式（list comprehension），说明如何用简洁表达式对序列进行转换、过滤、查询和数据提取，并进一步扩展到集合推导式与字典推导式。; type: short; source: sources/06_List_comprehension.md
+- [[summaries/07_Advanced_Topics__00_Overview]] — 本页是第 7 章“高级主题”的总览，介绍了一组在日常 Python 编程中可能遇到的进阶特性。; type: short; source: sources/07_Advanced_Topics__00_Overview.md
+- [[summaries/07_Functions]] — 本文介绍了 Python 程序组织的基础工具：自定义函数、标准库函数、异常处理，以及如何把脚本改造成可复用、可测试、可从命令行调用的程序。; type: short; source: sources/07_Functions.md
+- [[summaries/07_Objects]] — 本文介绍 Python 的内部对象模型，重点说明赋值、引用、对象身份、浅拷贝与深拷贝、类型检查，以及“一切皆对象”的含义。; type: short; source: sources/07_Objects.md
+- [[summaries/08_Testing_debugging__00_Overview]] — 本文档是第 8 章“Testing and debugging”的总览页，介绍本章将围绕软件开发中的基础质量保障与问题诊断主题展开，包括测试、日志、错误处理、诊断与调试。; type: short; source: sources/08_Testing_debugging__00_Overview.md
+- [[summaries/09_Packages__00_Overview]] — 本文是第 9 章“Packages”的章节导览，说明本章将课程收尾于 Python 代码的包结构组织、第三方包安装，以及如何准备将自己的代码交付给他人使用。; type: short; source: sources/09_Packages__00_Overview.md
+- [[summaries/Contents]] — 本文档是《Practical Python Programming》的课程目录页，提供了整门 Python 实用编程课程的结构化入口。; type: short; source: sources/Contents.md
+- [[summaries/practical-python-attribution]] — 本文档记录了本知识库中与 *Practical Python Programming* 相关内容的来源归属与许可要求。; type: short; source: sources/practical-python-attribution.md
+- [[summaries/TheEnd]] — 本文是课程的结束页，标志着学习者已经完成整个课程。; type: short; source: sources/TheEnd.md
+
+## Concepts
+
+- [[concepts/CC-BY-SA-4-0]] — CC BY-SA 4.0 是要求署名并以相同许可共享改编内容的开放许可协议。
+- [[concepts/CSV-数据处理]] — CSV 数据处理是把文本表格解析、转换并组织为可计算结构的过程。
+- [[concepts/Git-与课程仓库管理]] — 说明如何用 Git 管理 Practical Python 课程仓库、练习代码与来源归属。
+- [[concepts/itertools-模块]] — itertools 是 Python 中用于组合和处理迭代器的标准库工具模块。
+- [[concepts/main-函数与脚本结构]] — 说明如何用 main(argv)、入口保护和包外脚本组织可复用 Python 命令行程序。
+- [[concepts/Mixin-模式]] — Mixin 模式通过多重继承把可复用行为片段混入不同类中。
+- [[concepts/None-与缺失值]] — `None` 是 Python 中表示无值、缺失或无显式返回结果的特殊对象。
+- [[concepts/pip-与-PyPI]] — pip 与 PyPI 说明 Python 第三方包如何被查找、下载、安装到当前环境并参与 import。
+- [[concepts/pytest]] — pytest 是一个简洁、自动发现测试的 Python 第三方测试框架。
+- [[concepts/Python-pdb-调试器]] — Python pdb 是内置命令行调试器，用于断点、单步执行和检查程序状态。
+- [[concepts/Python-property-属性]] — Python property 用普通属性语法封装读取、赋值、验证与计算逻辑。
+- [[concepts/Python-slots]] — Python __slots__ 用于限制实例属性集合，并可减少对象内存占用。
+- [[concepts/Python-staticmethod-与-classmethod]] — staticmethod 与 classmethod 是用于定义类级方法行为的 Python 内置装饰器。
+- [[concepts/Python-不可变对象]] — Python 不可变对象创建后不能原地修改，变量只能重新绑定到新对象。
+- [[concepts/Python-交互式解释器]] — Python 交互式解释器是用于即时执行、探索代码和调试程序状态的 REPL 环境。
+- [[concepts/Python-函数参数]] — Python 函数参数定义调用接口，并支撑可变参数、解包、透传和装饰器包装。
+- [[concepts/Python-切片]] — Python 切片是一种用半开区间从序列中提取、替换或删除子序列的语法。
+- [[concepts/Python-包结构]] — Python 包结构说明如何用目录和 __init__.py 把多个模块组织成可导入、可分发的包。
+- [[concepts/Python-参数传递]] — Python 参数传递是把实参对象绑定到函数局部参数名，而不是复制对象本身。
+- [[concepts/Python-可变对象]] — Python 可变对象可原地修改；赋值和传参只共享引用，不会自动复制对象。
+- [[concepts/Python-命名空间与作用域]] — Python 命名空间是名称到对象的映射，作用域规定名称查找的范围与顺序。
+- [[concepts/Python-容器]] — Python 容器通过统一协议组织、访问、迭代和封装多个对象。
+- [[concepts/Python-对象模型]] — Python 对象模型解释名称、引用、类型、属性、方法和协议如何共同构成运行时行为。
+- [[concepts/Python-导入缓存]] — Python 导入缓存说明 import 后模块对象会保存在 sys.modules 中，后续导入通常复用同一模块对象。
+- [[concepts/Python-封装与访问约定]] — Python 通过命名约定、property 与对象模型惯用法实现非强制式封装。
+- [[concepts/Python-开发环境]] — Python 开发环境是支持编写、运行、调试并组织 Python 脚本的基础工作配置。
+- [[concepts/Python-拷贝语义]] — Python 拷贝语义说明赋值、浅拷贝与深拷贝如何处理对象引用。
+- [[concepts/Python-控制流与缩进]] — Python 控制流用条件、循环和缩进组织程序执行路径与代码块归属。
+- [[concepts/Python-文档与帮助系统]] — Python 文档与帮助系统用于查询、探索和说明对象、函数、模块与语言特性。
+- [[concepts/Python-真值测试]] — Python 真值测试说明对象在 if、while、and、or 等布尔上下文中如何被判定为真或假。
+- [[concepts/Python-自省]] — Python 自省是在运行时查看对象类型、属性、身份、文档和模块信息的能力。
+- [[concepts/Python-网络请求]] — Python 网络请求说明如何用标准库获取远程资源，并强调外部 API 示例的时效风险。
+- [[concepts/Python-装饰器]] — Python 装饰器是在不改写主体代码的前提下包装、扩展函数或方法行为的机制。
+- [[concepts/Python-输入输出]] — Python 输入输出涵盖终端、文件、命令行、环境变量与标准流的数据交换。
+- [[concepts/Python-运算符与表达式]] — Python 运算符与表达式通过语法和特殊方法共同定义对象的计算、比较与逻辑行为。
+- [[concepts/Python-项目组织]] — Python 项目组织说明脚本、模块、包、数据文件、测试和打包配置如何形成可维护项目结构。
+- [[concepts/site-packages]] — site-packages 是 Python 环境中存放第三方包的典型目录，直接影响 import 能否找到已安装包。
+- [[concepts/Unicode-与编码]] — Unicode 与编码解释字符如何表示为码点，以及文本如何转换为字节。
+- [[concepts/XML-解析]] — XML 解析是把 XML 文档转换成可查询结构，并从标签中提取需要的数据。
+- [[concepts/上下文管理器]] — 上下文管理器用 with 安全限定资源使用范围并自动完成释放。
+- [[concepts/代码分发]] — 代码分发是将项目整理成可安装、可复现、可复用软件的过程。
+- [[concepts/依赖管理]] — 依赖管理确保项目外部包可安装、可隔离、可记录并可复现。
+- [[concepts/元组与解包]] — 元组与解包用于组合、拆分和传递固定结构数据，是 Python 参数与序列处理基础。
+- [[concepts/函数]] — 函数是 Python 中封装计算、设计接口并传递行为的基本构件。
+- [[concepts/函数作为对象]] — 函数作为对象指函数可像普通数据一样被传递、保存、返回、调用和包装。
+- [[concepts/列表与序列]] — 列表是 Python 的可变有序序列，支持索引、切片、遍历、排序与数据建模。
+- [[concepts/列表推导式]] — 列表推导式是 Python 中用于简洁构造列表和表达数据转换逻辑的惯用语法。
+- [[concepts/动态属性访问]] — 动态属性访问是在运行时用字符串属性名读取、设置、删除或检测对象属性的机制。
+- [[concepts/包与虚拟环境]] — 包与虚拟环境用于组织 Python 代码、隔离依赖并为分发做准备。
+- [[concepts/可变性与引用]] — 可变性与引用解释共享对象为什么会产生联动修改，以及何时需要重新绑定或复制。
+- [[concepts/单元测试]] — 单元测试是验证函数、类或模块等最小代码单元行为是否符合预期的测试方法。
+- [[concepts/变量与数据类型]] — 变量是对象的名字，类型、值、身份和可变性属于对象本身。
+- [[concepts/变量绑定]] — 变量绑定说明 Python 变量名如何引用对象，以及重新赋值为什么不会修改原对象。
+- [[concepts/命令行参数]] — 命令行参数是在启动脚本时传入程序的字符串输入，用于配置程序行为。
+- [[concepts/回调函数]] — 回调函数是作为参数传入并由接收方在适当时机调用的函数。
+- [[concepts/字典与数据建模]] — 字典用键值映射组织记录、配置、索引，并连接数据处理与对象建模。
+- [[concepts/字符串处理]] — 字符串处理涵盖文本清洗、拆分、编码转换与格式化输出。
+- [[concepts/对象身份与相等性]] — 对象身份判断是否同一对象，相等性判断对象的值是否相同。
+- [[concepts/库接口设计]] — 库接口设计定义可复用代码对外调用、扩展、诊断与组织的稳定边界。
+- [[concepts/延迟执行]] — 延迟执行是把函数及其上下文保存起来，在未来某个时刻再调用。
+- [[concepts/开源内容署名与相同方式共享]] — 开源内容署名与相同方式共享要求派生作品保留来源标注并采用兼容许可发布。
+- [[concepts/异常处理]] — 异常处理是 Python 报告、传播、捕获和设计运行时错误语义的机制。
+- [[concepts/排序-key-函数]] — 排序 key 函数用于为复杂元素提取比较依据，从而控制排序顺序。
+- [[concepts/数据流管道]] — 数据流管道是用可迭代阶段串联生产、转换、过滤和消费数据的惰性处理模式。
+- [[concepts/数据清洗与类型转换]] — 数据清洗与类型转换把外部文本字段转换为有类型的 Python 对象，并处理缺失值和坏数据。
+- [[concepts/数据计数与汇总]] — 数据计数与汇总是将重复或分散记录聚合为可分析统计结果的过程。
+- [[concepts/文件类对象]] — 文件类对象是表现得像文件的对象，可让函数接收数据流而不是只接收文件名。
+- [[concepts/文件读写]] — 文件读写是 Python 程序从文本、日志或流式来源获取并处理数据的基础能力。
+- [[concepts/断言]] — 断言是在运行时检查程序内部假设是否成立的机制。
+- [[concepts/方法解析顺序-MRO]] — MRO 是 Python 在继承层次中查找属性和方法时使用的线性解析顺序。
+- [[concepts/替代构造器]] — 替代构造器是用类方法提供的非 __init__ 对象创建入口。
+- [[concepts/标准输入输出与管道]] — 标准输入输出与管道说明命令行程序如何通过 stdin、stdout、stderr、重定向和管道协作。
+- [[concepts/模块与-import]] — 模块与 import 是 Python 组织代码、查找依赖并复用库的核心机制。
+- [[concepts/正则表达式]] — 正则表达式是一种用于按模式搜索、提取和替换文本的规则语言。
+- [[concepts/流式数据处理]] — 流式数据处理是对持续到达或超大数据按需逐条处理的迭代式架构。
+- [[concepts/浅拷贝与深拷贝]] — 浅拷贝只复制外层容器，深拷贝会递归复制其包含的对象。
+- [[concepts/测试-日志与调试]] — 测试、日志与调试是让程序行为可验证、可观察、可诊断并可修复的一组实践。
+- [[concepts/软件测试]] — 软件测试通过可重复检查验证程序行为，是调试、日志和错误处理之前的主动质量保障。
+- [[concepts/浮点数精度]] — 浮点数精度描述小数近似表示带来的误差，以及计算、比较和格式化显示中的注意事项。
+- [[concepts/特殊方法]] — 特殊方法是让自定义对象接入 Python 内置语法、函数和协议的约定方法。
+- [[concepts/环境变量与进程环境]] — 环境变量是进程从外部环境接收配置并传递给子进程的键值数据。
+- [[concepts/现代-Python-打包实践]] — 现代 Python 打包实践区分课程中的传统 setup.py 示例与当前 pyproject.toml 和构建工具流程。
+- [[concepts/生产者消费者模式]] — 生产者消费者模式通过迭代接口解耦数据产生、转换与消费过程。
+- [[concepts/生成器表达式]] — 生成器表达式是以惰性方式创建生成器对象的简洁推导式语法。
+- [[concepts/类与对象]] — 类定义对象类型，对象封装独立状态并通过方法提供行为。
+- [[concepts/类型注解]] — 类型注解是在 Python 函数签名中标明参数和返回值类型的可选说明。
+- [[concepts/绑定方法]] — 绑定方法是实例访问类中函数时生成的、已携带 self 的方法对象。
+- [[concepts/继承与多态]] — 继承与多态让自定义类复用、扩展并通过统一接口替换使用。
+- [[concepts/表格化输出]] — 表格化输出是将结构化数据按列组织并以可读或可交换格式呈现的技术。
+- [[concepts/课程练习工作流]] — 课程练习工作流是在终端、REPL、脚本和调试循环中逐步完成 Python 实践的学习方法。
+- [[concepts/调用栈与-traceback]] — 调用栈与 Traceback 展示程序出错前的函数调用路径和最终异常原因。
+- [[concepts/迭代协议与生成器]] — 统一说明 Python 迭代协议、生成器与惰性数据流管道的核心机制。
+- [[concepts/闭包]] — 闭包是函数携带其所引用外部变量环境并在之后继续使用的机制。
+- [[concepts/队列与滑动窗口]] — 队列与滑动窗口用于按顺序处理数据，并保留最近一段有限历史。
+- [[concepts/集合与集合运算]] — 集合是无序且元素唯一的容器，适合去重、成员测试和集合运算。
+- [[concepts/鸭子类型]] — 鸭子类型根据对象是否具备所需行为来使用对象，而非依赖其具体类型。
+
+## Exercises
+
+- [[exercises/1-1-using-python-as-a-calculator]] — id: practical-python-1.1; title: Using Python as a Calculator; section: 1.1 Python; private_solution: false; skip: false
+- [[exercises/1-2-getting-help]] — id: practical-python-1.2; title: Getting help; section: 1.1 Python; private_solution: false; skip: false
+- [[exercises/1-3-cutting-and-pasting]] — id: practical-python-1.3; title: Cutting and Pasting; section: 1.1 Python; private_solution: false; skip: false
+- [[exercises/1-4-where-is-my-bus]] — id: practical-python-1.4; title: Where is My Bus?; section: 1.1 Python; private_solution: false; skip: false
+- [[exercises/1-5-the-bouncing-ball]] — id: practical-python-1.5; title: The Bouncing Ball; section: 1.2 A First Program; private_solution: true; skip: false
+- [[exercises/1-6-debugging]] — id: practical-python-1.6; title: Debugging; section: 1.2 A First Program; private_solution: false; skip: false
+- [[exercises/1-7-dave-s-mortgage]] — id: practical-python-1.7; title: Dave's mortgage; section: 1.3 Numbers; private_solution: false; skip: false
+- [[exercises/1-8-extra-payments]] — id: practical-python-1.8; title: Extra payments; section: 1.3 Numbers; private_solution: false; skip: false
+- [[exercises/1-9-making-an-extra-payment-calculator]] — id: practical-python-1.9; title: Making an Extra Payment Calculator; section: 1.3 Numbers; private_solution: false; skip: false
+- [[exercises/1-10-making-a-table]] — id: practical-python-1.10; title: Making a table; section: 1.3 Numbers; private_solution: true; skip: false
+- [[exercises/1-11-bonus]] — id: practical-python-1.11; title: Bonus; section: 1.3 Numbers; private_solution: false; skip: false
+- [[exercises/1-12-a-mystery]] — id: practical-python-1.12; title: A Mystery; section: 1.3 Numbers; private_solution: false; skip: false
+- [[exercises/1-13-extracting-individual-characters-and-substrings]] — id: practical-python-1.13; title: Extracting individual characters and substrings; section: 1.4 Strings; private_solution: false; skip: false
+- [[exercises/1-14-string-concatenation]] — id: practical-python-1.14; title: String concatenation; section: 1.4 Strings; private_solution: false; skip: false
+- [[exercises/1-15-membership-testing-substring-testing]] — id: practical-python-1.15; title: Membership testing (substring testing); section: 1.4 Strings; private_solution: false; skip: false
+- [[exercises/1-16-string-methods]] — id: practical-python-1.16; title: String Methods; section: 1.4 Strings; private_solution: false; skip: false
+- [[exercises/1-17-f-strings]] — id: practical-python-1.17; title: f-strings; section: 1.4 Strings; private_solution: false; skip: false
+- [[exercises/1-18-regular-expressions]] — id: practical-python-1.18; title: Regular Expressions; section: 1.4 Strings; private_solution: false; skip: false
+- [[exercises/1-19-extracting-and-reassigning-list-elements]] — id: practical-python-1.19; title: Extracting and reassigning list elements; section: 1.5 Lists; private_solution: false; skip: false
+- [[exercises/1-20-looping-over-list-items]] — id: practical-python-1.20; title: Looping over list items; section: 1.5 Lists; private_solution: false; skip: false
+- [[exercises/1-21-membership-tests]] — id: practical-python-1.21; title: Membership tests; section: 1.5 Lists; private_solution: false; skip: false
+- [[exercises/1-22-appending-inserting-and-deleting-items]] — id: practical-python-1.22; title: Appending, inserting, and deleting items; section: 1.5 Lists; private_solution: false; skip: false
+- [[exercises/1-23-sorting]] — id: practical-python-1.23; title: Sorting; section: 1.5 Lists; private_solution: false; skip: false
+- [[exercises/1-24-putting-it-all-back-together]] — id: practical-python-1.24; title: Putting it all back together; section: 1.5 Lists; private_solution: false; skip: false
+- [[exercises/1-25-lists-of-anything]] — id: practical-python-1.25; title: Lists of anything; section: 1.5 Lists; private_solution: false; skip: false
+- [[exercises/1-26-file-preliminaries]] — id: practical-python-1.26; title: File Preliminaries; section: 1.6 File Management; private_solution: false; skip: false
+- [[exercises/1-27-reading-a-data-file]] — id: practical-python-1.27; title: Reading a data file; section: 1.6 File Management; private_solution: true; skip: false
+- [[exercises/1-28-other-kinds-of-files]] — id: practical-python-1.28; title: Other kinds of 'files; section: 1.6 File Management; private_solution: false; skip: false
+- [[exercises/1-29-defining-a-function]] — id: practical-python-1.29; title: Defining a function; section: 1.7 Functions; private_solution: false; skip: false
+- [[exercises/1-30-turning-a-script-into-a-function]] — id: practical-python-1.30; title: Turning a script into a function; section: 1.7 Functions; private_solution: false; skip: false
+- [[exercises/1-31-error-handling]] — id: practical-python-1.31; title: Error handling; section: 1.7 Functions; private_solution: false; skip: false
+- [[exercises/1-32-using-a-library-function]] — id: practical-python-1.32; title: Using a library function; section: 1.7 Functions; private_solution: false; skip: false
+- [[exercises/1-33-reading-from-the-command-line]] — id: practical-python-1.33; title: Reading from the command line; section: 1.7 Functions; private_solution: true; skip: false
+- [[exercises/2-1-tuples]] — id: practical-python-2.1; title: Tuples; section: 2.1 Datatypes and Data structures; private_solution: false; skip: false
+- [[exercises/2-2-dictionaries-as-a-data-structure]] — id: practical-python-2.2; title: Dictionaries as a data structure; section: 2.1 Datatypes and Data structures; private_solution: false; skip: false
+- [[exercises/2-3-some-additional-dictionary-operations]] — id: practical-python-2.3; title: Some additional dictionary operations; section: 2.1 Datatypes and Data structures; private_solution: false; skip: false
+- [[exercises/2-4-a-list-of-tuples]] — id: practical-python-2.4; title: A list of tuples; section: 2.2 Containers; private_solution: false; skip: false
+- [[exercises/2-5-list-of-dictionaries]] — id: practical-python-2.5; title: List of Dictionaries; section: 2.2 Containers; private_solution: false; skip: false
+- [[exercises/2-6-dictionaries-as-a-container]] — id: practical-python-2.6; title: Dictionaries as a container; section: 2.2 Containers; private_solution: false; skip: false
+- [[exercises/2-7-finding-out-if-you-can-retire]] — id: practical-python-2.7; title: Finding out if you can retire; section: 2.2 Containers; private_solution: true; skip: false
+- [[exercises/2-8-how-to-format-numbers]] — id: practical-python-2.8; title: How to format numbers; section: 2.3 Formatting; private_solution: false; skip: false
+- [[exercises/2-9-collecting-data]] — id: practical-python-2.9; title: Collecting Data; section: 2.3 Formatting; private_solution: false; skip: false
+- [[exercises/2-10-printing-a-formatted-table]] — id: practical-python-2.10; title: Printing a formatted table; section: 2.3 Formatting; private_solution: false; skip: false
+- [[exercises/2-11-adding-some-headers]] — id: practical-python-2.11; title: Adding some headers; section: 2.3 Formatting; private_solution: true; skip: false
+- [[exercises/2-12-formatting-challenge]] — id: practical-python-2.12; title: Formatting Challenge; section: 2.3 Formatting; private_solution: false; skip: false
+- [[exercises/2-13-counting]] — id: practical-python-2.13; title: Counting; section: 2.4 Sequences; private_solution: false; skip: false
+- [[exercises/2-14-more-sequence-operations]] — id: practical-python-2.14; title: More sequence operations; section: 2.4 Sequences; private_solution: false; skip: false
+- [[exercises/2-15-a-practical-enumerate-example]] — id: practical-python-2.15; title: A practical enumerate() example; section: 2.4 Sequences; private_solution: false; skip: false
+- [[exercises/2-16-using-the-zip-function]] — id: practical-python-2.16; title: Using the zip() function; section: 2.4 Sequences; private_solution: true; skip: false
+- [[exercises/2-17-inverting-a-dictionary]] — id: practical-python-2.17; title: Inverting a dictionary; section: 2.4 Sequences; private_solution: false; skip: false
+- [[exercises/2-18-tabulating-with-counters]] — id: practical-python-2.18; title: Tabulating with Counters; section: 2.5 collections module; private_solution: false; skip: false
+- [[exercises/2-19-list-comprehensions]] — id: practical-python-2.19; title: List comprehensions; section: 2.6 List Comprehensions; private_solution: false; skip: false
+- [[exercises/2-20-sequence-reductions]] — id: practical-python-2.20; title: Sequence Reductions; section: 2.6 List Comprehensions; private_solution: false; skip: false
+- [[exercises/2-21-data-queries]] — id: practical-python-2.21; title: Data Queries; section: 2.6 List Comprehensions; private_solution: false; skip: false
+- [[exercises/2-22-data-extraction]] — id: practical-python-2.22; title: Data Extraction; section: 2.6 List Comprehensions; private_solution: false; skip: false
+- [[exercises/2-23-extracting-data-from-csv-files]] — id: practical-python-2.23; title: Extracting Data From CSV Files; section: 2.6 List Comprehensions; private_solution: false; skip: false
+- [[exercises/2-24-first-class-data]] — id: practical-python-2.24; title: First-class Data; section: 2.7 Objects; private_solution: false; skip: false
+- [[exercises/2-25-making-dictionaries]] — id: practical-python-2.25; title: Making dictionaries; section: 2.7 Objects; private_solution: false; skip: false
+- [[exercises/2-26-the-big-picture]] — id: practical-python-2.26; title: The Big Picture; section: 2.7 Objects; private_solution: false; skip: false
+- [[exercises/3-1-structuring-a-program-as-a-collection-of-functions]] — id: practical-python-3.1; title: Structuring a program as a collection of functions; section: 3.1 Scripting; private_solution: false; skip: false
+- [[exercises/3-2-creating-a-top-level-function-for-program-execution]] — id: practical-python-3.2; title: Creating a top-level function for program execution; section: 3.1 Scripting; private_solution: true; skip: false
+- [[exercises/3-3-reading-csv-files]] — id: practical-python-3.3; title: Reading CSV Files; section: 3.2 More on Functions; private_solution: false; skip: false
+- [[exercises/3-4-building-a-column-selector]] — id: practical-python-3.4; title: Building a Column Selector; section: 3.2 More on Functions; private_solution: false; skip: false
+- [[exercises/3-5-performing-type-conversion]] — id: practical-python-3.5; title: Performing Type Conversion; section: 3.2 More on Functions; private_solution: false; skip: false
+- [[exercises/3-6-working-without-headers]] — id: practical-python-3.6; title: Working without Headers; section: 3.2 More on Functions; private_solution: false; skip: false
+- [[exercises/3-7-picking-a-different-column-delimiter]] — id: practical-python-3.7; title: Picking a different column delimiter; section: 3.2 More on Functions; private_solution: true; skip: false
+- [[exercises/3-8-raising-exceptions]] — id: practical-python-3.8; title: Raising exceptions; section: 3.3 Error Checking; private_solution: false; skip: false
+- [[exercises/3-9-catching-exceptions]] — id: practical-python-3.9; title: Catching exceptions; section: 3.3 Error Checking; private_solution: false; skip: false
+- [[exercises/3-10-silencing-errors]] — id: practical-python-3.10; title: Silencing Errors; section: 3.3 Error Checking; private_solution: true; skip: false
+- [[exercises/3-11-module-imports]] — id: practical-python-3.11; title: Module imports; section: 3.4 Modules; private_solution: false; skip: false
+- [[exercises/3-12-using-your-library-module]] — id: practical-python-3.12; title: Using your library module; section: 3.4 Modules; private_solution: false; skip: false
+- [[exercises/3-13-intentionally-left-blank-skip]] — id: practical-python-3.13; title: Intentionally left blank (skip); section: 3.4 Modules; private_solution: false; skip: true
+- [[exercises/3-14-using-more-library-imports]] — id: practical-python-3.14; title: Using more library imports; section: 3.4 Modules; private_solution: true; skip: false
+- [[exercises/3-15-main-functions]] — id: practical-python-3.15; title: `main()` functions; section: 3.5 Main Module; private_solution: false; skip: false
+- [[exercises/3-16-making-scripts]] — id: practical-python-3.16; title: Making Scripts; section: 3.5 Main Module; private_solution: true; skip: false
+- [[exercises/3-17-from-filenames-to-file-like-objects]] — id: practical-python-3.17; title: From filenames to file-like objects; section: 3.6 Design Discussion; private_solution: false; skip: false
+- [[exercises/3-18-fixing-existing-functions]] — id: practical-python-3.18; title: Fixing existing functions; section: 3.6 Design Discussion; private_solution: true; skip: false
+- [[exercises/4-1-objects-as-data-structures]] — id: practical-python-4.1; title: Objects as Data Structures; section: 4.1 Classes; private_solution: false; skip: false
+- [[exercises/4-2-adding-some-methods]] — id: practical-python-4.2; title: Adding some Methods; section: 4.1 Classes; private_solution: false; skip: false
+- [[exercises/4-3-creating-a-list-of-instances]] — id: practical-python-4.3; title: Creating a list of instances; section: 4.1 Classes; private_solution: false; skip: false
+- [[exercises/4-4-using-your-class]] — id: practical-python-4.4; title: Using your class; section: 4.1 Classes; private_solution: true; skip: false
+- [[exercises/4-5-an-extensibility-problem]] — id: practical-python-4.5; title: An Extensibility Problem; section: 4.2 Inheritance; private_solution: false; skip: false
+- [[exercises/4-6-using-inheritance-to-produce-different-output]] — id: practical-python-4.6; title: Using Inheritance to Produce Different Output; section: 4.2 Inheritance; private_solution: false; skip: false
+- [[exercises/4-7-polymorphism-in-action]] — id: practical-python-4.7; title: Polymorphism in Action; section: 4.2 Inheritance; private_solution: false; skip: false
+- [[exercises/4-8-putting-it-all-together]] — id: practical-python-4.8; title: Putting it all together; section: 4.2 Inheritance; private_solution: false; skip: false
+- [[exercises/4-9-better-output-for-printing-objects]] — id: practical-python-4.9; title: Better output for printing objects; section: 4.3 Special Methods; private_solution: false; skip: false
+- [[exercises/4-10-an-example-of-using-getattr]] — id: practical-python-4.10; title: An example of using getattr(); section: 4.3 Special Methods; private_solution: true; skip: false
+- [[exercises/4-11-defining-a-custom-exception]] — id: practical-python-4.11; title: Defining a custom exception; section: 4.4 Defining Exceptions; private_solution: false; skip: false
+- [[exercises/5-1-representation-of-instances]] — id: practical-python-5.1; title: Representation of Instances; section: 5.1 Dictionaries Revisited; private_solution: false; skip: false
+- [[exercises/5-2-modification-of-instance-data]] — id: practical-python-5.2; title: Modification of Instance Data; section: 5.1 Dictionaries Revisited; private_solution: false; skip: false
+- [[exercises/5-3-the-role-of-classes]] — id: practical-python-5.3; title: The role of classes; section: 5.1 Dictionaries Revisited; private_solution: false; skip: false
+- [[exercises/5-4-bound-methods]] — id: practical-python-5.4; title: Bound methods; section: 5.1 Dictionaries Revisited; private_solution: false; skip: false
+- [[exercises/5-5-inheritance]] — id: practical-python-5.5; title: Inheritance; section: 5.1 Dictionaries Revisited; private_solution: false; skip: false
+- [[exercises/5-6-simple-properties]] — id: practical-python-5.6; title: Simple Properties; section: 5.2 Classes and Encapsulation; private_solution: false; skip: false
+- [[exercises/5-7-properties-and-setters]] — id: practical-python-5.7; title: Properties and Setters; section: 5.2 Classes and Encapsulation; private_solution: false; skip: false
+- [[exercises/5-8-adding-slots]] — id: practical-python-5.8; title: Adding slots; section: 5.2 Classes and Encapsulation; private_solution: true; skip: false
+- [[exercises/6-1-iteration-illustrated]] — id: practical-python-6.1; title: Iteration Illustrated; section: 6.1 Iteration Protocol; private_solution: false; skip: false
+- [[exercises/6-2-supporting-iteration]] — id: practical-python-6.2; title: Supporting Iteration; section: 6.1 Iteration Protocol; private_solution: false; skip: false
+- [[exercises/6-3-making-a-more-proper-container]] — id: practical-python-6.3; title: Making a more proper container; section: 6.1 Iteration Protocol; private_solution: true; skip: false
+- [[exercises/6-4-a-simple-generator]] — id: practical-python-6.4; title: A Simple Generator; section: 6.2 Customizing Iteration; private_solution: false; skip: false
+- [[exercises/6-5-monitoring-a-streaming-data-source]] — id: practical-python-6.5; title: Monitoring a streaming data source; section: 6.2 Customizing Iteration; private_solution: false; skip: false
+- [[exercises/6-6-using-a-generator-to-produce-data]] — id: practical-python-6.6; title: Using a generator to produce data; section: 6.2 Customizing Iteration; private_solution: false; skip: false
+- [[exercises/6-7-watching-your-portfolio]] — id: practical-python-6.7; title: Watching your portfolio; section: 6.2 Customizing Iteration; private_solution: true; skip: false
+- [[exercises/6-8-setting-up-a-simple-pipeline]] — id: practical-python-6.8; title: Setting up a simple pipeline; section: 6.3 Producers, Consumers and Pipelines; private_solution: false; skip: false
+- [[exercises/6-9-setting-up-a-more-complex-pipeline]] — id: practical-python-6.9; title: Setting up a more complex pipeline; section: 6.3 Producers, Consumers and Pipelines; private_solution: false; skip: false
+- [[exercises/6-10-making-more-pipeline-components]] — id: practical-python-6.10; title: Making more pipeline components; section: 6.3 Producers, Consumers and Pipelines; private_solution: false; skip: false
+- [[exercises/6-11-filtering-data]] — id: practical-python-6.11; title: Filtering data; section: 6.3 Producers, Consumers and Pipelines; private_solution: false; skip: false
+- [[exercises/6-12-putting-it-all-together]] — id: practical-python-6.12; title: Putting it all together; section: 6.3 Producers, Consumers and Pipelines; private_solution: true; skip: false
+- [[exercises/6-13-generator-expressions]] — id: practical-python-6.13; title: Generator Expressions; section: 6.4 More Generators; private_solution: false; skip: false
+- [[exercises/6-14-generator-expressions-in-function-arguments]] — id: practical-python-6.14; title: Generator Expressions in Function Arguments; section: 6.4 More Generators; private_solution: false; skip: false
+- [[exercises/6-15-code-simplification]] — id: practical-python-6.15; title: Code simplification; section: 6.4 More Generators; private_solution: true; skip: false
+- [[exercises/7-1-a-simple-example-of-variable-arguments]] — id: practical-python-7.1; title: A simple example of variable arguments; section: 7.1 Variable Arguments; private_solution: false; skip: false
+- [[exercises/7-2-passing-tuple-and-dicts-as-arguments]] — id: practical-python-7.2; title: Passing tuple and dicts as arguments; section: 7.1 Variable Arguments; private_solution: false; skip: false
+- [[exercises/7-3-creating-a-list-of-instances]] — id: practical-python-7.3; title: Creating a list of instances; section: 7.1 Variable Arguments; private_solution: false; skip: false
+- [[exercises/7-4-argument-pass-through]] — id: practical-python-7.4; title: Argument pass-through; section: 7.1 Variable Arguments; private_solution: true; skip: false
+- [[exercises/7-5-sorting-on-a-field]] — id: practical-python-7.5; title: Sorting on a field; section: 7.2 Anonymous Functions and Lambda; private_solution: false; skip: false
+- [[exercises/7-6-sorting-on-a-field-with-lambda]] — id: practical-python-7.6; title: Sorting on a field with lambda; section: 7.2 Anonymous Functions and Lambda; private_solution: false; skip: false
+- [[exercises/7-7-using-closures-to-avoid-repetition]] — id: practical-python-7.7; title: Using Closures to Avoid Repetition; section: 7.3 Returning Functions; private_solution: false; skip: false
+- [[exercises/7-8-simplifying-function-calls]] — id: practical-python-7.8; title: Simplifying Function Calls; section: 7.3 Returning Functions; private_solution: false; skip: false
+- [[exercises/7-9-putting-it-into-practice]] — id: practical-python-7.9; title: Putting it into practice; section: 7.3 Returning Functions; private_solution: true; skip: false
+- [[exercises/7-10-a-decorator-for-timing]] — id: practical-python-7.10; title: A decorator for timing; section: 7.4 Function Decorators; private_solution: true; skip: false
+- [[exercises/7-11-class-methods-in-practice]] — id: practical-python-7.11; title: Class Methods in Practice; section: 7.5 Decorated Methods; private_solution: true; skip: false
+- [[exercises/8-1-writing-unit-tests]] — id: practical-python-8.1; title: Writing Unit Tests; section: 8.1 Testing; private_solution: true; skip: false
+- [[exercises/8-2-adding-logging-to-a-module]] — id: practical-python-8.2; title: Adding logging to a module; section: 8.2 Logging; private_solution: true; skip: false
+- [[exercises/8-3-adding-logging-to-a-program]] — id: practical-python-8.3; title: Adding Logging to a Program; section: 8.2 Logging; private_solution: false; skip: false
+- [[exercises/8-4-bugs-what-bugs]] — id: practical-python-8.4; title: Bugs? What Bugs?; section: 8.3 Debugging; private_solution: false; skip: false
+- [[exercises/9-1-making-a-simple-package]] — id: practical-python-9.1; title: Making a simple package; section: 9.1 Packages; private_solution: false; skip: false
+- [[exercises/9-2-making-an-application-directory]] — id: practical-python-9.2; title: Making an application directory; section: 9.1 Packages; private_solution: false; skip: false
+- [[exercises/9-3-top-level-scripts]] — id: practical-python-9.3; title: Top-level Scripts; section: 9.1 Packages; private_solution: true; skip: false
+- [[exercises/9-4-creating-a-virtual-environment]] — id: practical-python-9.4; title: Creating a Virtual Environment; section: 9.2 Third Party Modules; private_solution: false; skip: false
+- [[exercises/9-5-make-a-package]] — id: practical-python-9.5; title: Make a package; section: 9.3 Distribution; private_solution: true; skip: false
+
+## Explorations
+
+- No saved explorations yet.

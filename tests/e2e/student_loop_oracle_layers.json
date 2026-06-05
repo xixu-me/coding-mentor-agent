@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "oracleLayerPolicyVersion": "student-loop-oracle-layers.v1",
+  "layers": [
+    {
+      "id": "frontend_display",
+      "blockingCategories": [
+        "blank_page",
+        "dead_end_loading_state",
+        "inaccessible_expected_control",
+        "hidden_expected_control",
+        "disabled_expected_control",
+        "layout_overflow",
+        "text_overlap",
+        "broken_rendered_tutor_content",
+        "tutor_agent_ui_overlap",
+        "current_concept_display_missing"
+      ],
+      "advisoryCategories": ["stale_visual_state", "low_confidence_visual_quality"]
+    },
+    {
+      "id": "learner_workflow",
+      "blockingCategories": [
+        "blocked_student_workflow",
+        "diagnostic_blockage",
+        "missing_tutor_agent_state",
+        "missing_tutor_agent_action",
+        "dead_end_learning_flow",
+        "agent_refresh_duplication",
+        "locked_practice_mismatch",
+        "project_flow_dead_end",
+        "refresh_recovery_failure",
+        "back_navigation_failure",
+        "repeated_question_failure",
+        "export_workflow_issue"
+      ],
+      "advisoryCategories": ["unclear_next_step", "excessive_retry_needed"]
+    },
+    {
+      "id": "business_logic",
+      "blockingCategories": [
+        "state_contradiction",
+        "progress_contradiction",
+        "hallucinated_progress",
+        "frontier_order_violation",
+        "practice_without_validated_action",
+        "guided_answer_direct_mastery_mutation",
+        "model_hallucinated_progress",
+        "snapshot_progress_export_contradiction",
+        "wrong_chapter_recommendation",
+        "prerequisite_gating_error",
+        "snapshot_export_inconsistency"
+      ],
+      "advisoryCategories": ["low_confidence_learning_quality"]
+    },
+    {
+      "id": "model_response",
+      "blockingCategories": [
+        "irrelevant_empty_response",
+        "model_empty_output",
+        "live_provider_fallback_response",
+        "unsafe_direct_answer_leakage",
+        "missed_code_or_error_context",
+        "unbounded_consumption"
+      ],
+      "advisoryCategories": ["repeated_fallback", "irrelevant_output", "excessive_verbosity"]
+    },
+    {
+      "id": "api_persistence",
+      "blockingCategories": [
+        "unexpected_http_error",
+        "missing_tutor_agent_frontier",
+        "agent_practice_attribution_missing",
+        "stale_catalog_progression",
+        "sse_lifecycle_failure",
+        "missing_persisted_message",
+        "session_loss",
+        "export_inconsistency",
+        "backup_export_safety_failure"
+      ],
+      "advisoryCategories": ["slow_persistence_recovery", "unclassified_request_failure"]
+    },
+    {
+      "id": "security_safety",
+      "blockingCategories": [
+        "prompt_injection_compliance",
+        "forbidden_disclosure",
+        "system_prompt_leakage",
+        "hidden_material_leakage",
+        "high_impact_tool_after_rejected_action",
+        "sensitive_agent_artifact_leakage",
+        "excessive_agency",
+        "external_navigation",
+        "artifact_safety_bypass",
+        "credential_leakage"
+      ],
+      "advisoryCategories": ["unsafe_output_low_confidence"]
+    },
+    {
+      "id": "performance_stability",
+      "blockingCategories": [
+        "provider_timeout",
+        "provider_rate_limit",
+        "provider_outage",
+        "slow_ui_recovery",
+        "repeated_spinner_state",
+        "budget_exceedance"
+      ],
+      "advisoryCategories": ["slow_provider_response", "unclassified_console_error", "screenshot_anomaly", "provider_anomaly", "incomplete_artifact"]
+    }
+  ],
+  "categoryLayerOverrides": {
+    "live_provider_configuration": "performance_stability",
+    "application_integration_failure": "api_persistence",
+    "actor_policy_rejection": "learner_workflow",
+    "missing_tutor_agent_state": "learner_workflow",
+    "missing_tutor_agent_action": "learner_workflow",
+    "dead_end_learning_flow": "learner_workflow",
+    "agent_refresh_duplication": "learner_workflow",
+    "frontier_order_violation": "business_logic",
+    "practice_without_validated_action": "business_logic",
+    "guided_answer_direct_mastery_mutation": "business_logic",
+    "model_hallucinated_progress": "business_logic",
+    "snapshot_progress_export_contradiction": "business_logic",
+    "missing_tutor_agent_frontier": "api_persistence",
+    "agent_practice_attribution_missing": "api_persistence",
+    "stale_catalog_progression": "api_persistence",
+    "high_impact_tool_after_rejected_action": "security_safety",
+    "sensitive_agent_artifact_leakage": "security_safety",
+    "tutor_agent_ui_overlap": "frontend_display",
+    "current_concept_display_missing": "frontend_display"
+  },
+  "realisticSummaryRequiredFields": [
+    "gate_kind",
+    "live_mode",
+    "provider_metadata",
+    "actor_metadata",
+    "oracle_layer_summary",
+    "actor_action_coverage",
+    "prompt_coverage",
+    "prompt_id_coverage",
+    "mutation_coverage",
+    "oracle_layer_coverage",
+    "full_realistic_closure",
+    "tutor_agent_evidence",
+    "tutor_agent_axis_coverage",
+    "tutor_agent_issue_clusters",
+    "issue_clusters",
+    "exclusions",
+    "residual_risk"
+  ],
+  "blockingPolicy": {
+    "highRiskStopsImmediately": true,
+    "advisoryFindingsDoNotBlockClosure": true
+  }
+}

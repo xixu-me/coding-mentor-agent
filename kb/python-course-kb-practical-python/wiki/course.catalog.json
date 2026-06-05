@@ -1,0 +1,2254 @@
+{
+  "schema_version": "course_catalog.v1",
+  "catalog_version": "practical-python-2026-05",
+  "units": [
+    {
+      "id": "introduction",
+      "title": "入门与基础",
+      "order": 1,
+      "source_path": "summaries/01_Introduction__00_Overview.md",
+      "metadata": {
+        "source_title": "Introduction"
+      }
+    },
+    {
+      "id": "working-with-data",
+      "title": "数据处理",
+      "order": 2,
+      "source_path": "summaries/02_Working_with_data__00_Overview.md",
+      "metadata": {
+        "source_title": "Working With Data"
+      }
+    },
+    {
+      "id": "program-organization",
+      "title": "程序组织",
+      "order": 3,
+      "source_path": "summaries/03_Program_organization__00_Overview.md",
+      "metadata": {
+        "source_title": "Program Organization"
+      }
+    },
+    {
+      "id": "classes-and-objects",
+      "title": "类与对象",
+      "order": 4,
+      "source_path": "summaries/04_Classes_objects__00_Overview.md",
+      "metadata": {
+        "source_title": "Classes and Objects"
+      }
+    },
+    {
+      "id": "object-model",
+      "title": "对象模型",
+      "order": 5,
+      "source_path": "summaries/05_Object_model__00_Overview.md",
+      "metadata": {
+        "source_title": "Object Model"
+      }
+    },
+    {
+      "id": "generators",
+      "title": "生成器",
+      "order": 6,
+      "source_path": "summaries/06_Generators__00_Overview.md",
+      "metadata": {
+        "source_title": "Generators"
+      }
+    },
+    {
+      "id": "advanced-topics",
+      "title": "进阶主题",
+      "order": 7,
+      "source_path": "summaries/07_Advanced_Topics__00_Overview.md",
+      "metadata": {
+        "source_title": "Advanced Topics"
+      }
+    },
+    {
+      "id": "testing-debugging",
+      "title": "测试与调试",
+      "order": 8,
+      "source_path": "summaries/08_Testing_debugging__00_Overview.md",
+      "metadata": {
+        "source_title": "Testing and Debugging"
+      }
+    },
+    {
+      "id": "packages",
+      "title": "包与工程化",
+      "order": 9,
+      "source_path": "summaries/09_Packages__00_Overview.md",
+      "metadata": {
+        "source_title": "Packages"
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "id": "intro-python",
+      "title": "Python 交互式解释器",
+      "unit_id": "introduction",
+      "order": 1,
+      "source_path": "concepts/Python-交互式解释器.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "REPL",
+        "解释器"
+      ],
+      "metadata": {
+        "root_concept": true,
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "variable",
+      "title": "变量与数据类型",
+      "unit_id": "introduction",
+      "order": 2,
+      "source_path": "concepts/变量与数据类型.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "变量",
+        "类型",
+        "数据类型"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "expression",
+      "title": "表达式与运算符",
+      "unit_id": "introduction",
+      "order": 3,
+      "source_path": "concepts/Python-运算符与表达式.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "运算符",
+        "表达式",
+        "operator"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "condition",
+      "title": "条件判断",
+      "unit_id": "introduction",
+      "order": 4,
+      "source_path": "concepts/Python-控制流与缩进.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "if",
+        "elif",
+        "else",
+        "分支"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "loop",
+      "title": "循环结构",
+      "unit_id": "introduction",
+      "order": 5,
+      "source_path": "concepts/Python-控制流与缩进.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "循环",
+        "for",
+        "while",
+        "range",
+        "遍历"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "string",
+      "title": "字符串处理",
+      "unit_id": "introduction",
+      "order": 6,
+      "source_path": "concepts/字符串处理.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "str",
+        "f-string",
+        "格式化"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "list",
+      "title": "列表",
+      "unit_id": "introduction",
+      "order": 7,
+      "source_path": "concepts/列表与序列.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "list",
+        "序列"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "file_io",
+      "title": "文件读写",
+      "unit_id": "introduction",
+      "order": 8,
+      "source_path": "concepts/文件读写.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "文件",
+        "open",
+        "读文件"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "function",
+      "title": "函数",
+      "unit_id": "introduction",
+      "order": 9,
+      "source_path": "concepts/函数.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "def",
+        "return",
+        "参数"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "tuple",
+      "title": "元组与解包",
+      "unit_id": "working-with-data",
+      "order": 10,
+      "source_path": "concepts/元组与解包.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "tuple",
+        "unpack"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "dict",
+      "title": "字典",
+      "unit_id": "working-with-data",
+      "order": 11,
+      "source_path": "concepts/字典与数据建模.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "dict",
+        "映射"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "set",
+      "title": "集合与集合运算",
+      "unit_id": "working-with-data",
+      "order": 12,
+      "source_path": "concepts/集合与集合运算.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "set",
+        "去重"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "csv-data",
+      "title": "CSV 数据处理",
+      "unit_id": "working-with-data",
+      "order": 13,
+      "source_path": "concepts/CSV-数据处理.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "csv",
+        "表格数据"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "data-cleaning",
+      "title": "数据清洗与类型转换",
+      "unit_id": "working-with-data",
+      "order": 14,
+      "source_path": "concepts/数据清洗与类型转换.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "类型转换",
+        "cleaning"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "counter-summary",
+      "title": "数据计数与汇总",
+      "unit_id": "working-with-data",
+      "order": 15,
+      "source_path": "concepts/数据计数与汇总.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "Counter",
+        "汇总"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "function-parameters",
+      "title": "函数参数",
+      "unit_id": "program-organization",
+      "order": 16,
+      "source_path": "concepts/Python-函数参数.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "args",
+        "kwargs",
+        "默认参数"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "script-main",
+      "title": "main 函数与脚本结构",
+      "unit_id": "program-organization",
+      "order": 17,
+      "source_path": "concepts/main-函数与脚本结构.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "__main__",
+        "脚本"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "module_package",
+      "title": "模块与包",
+      "unit_id": "program-organization",
+      "order": 18,
+      "source_path": "concepts/Python-包结构.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "import",
+        "模块",
+        "包"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "exception",
+      "title": "异常处理",
+      "unit_id": "program-organization",
+      "order": 19,
+      "source_path": "concepts/异常处理.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "try",
+        "except",
+        "traceback"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "oop",
+      "title": "类与对象",
+      "unit_id": "classes-and-objects",
+      "order": 20,
+      "source_path": "concepts/类与对象.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "class",
+        "对象",
+        "类"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "inheritance",
+      "title": "继承与多态",
+      "unit_id": "classes-and-objects",
+      "order": 21,
+      "source_path": "concepts/继承与多态.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "继承",
+        "多态"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "python-object-model",
+      "title": "Python 对象模型",
+      "unit_id": "object-model",
+      "order": 22,
+      "source_path": "concepts/Python-对象模型.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "对象模型",
+        "引用"
+      ],
+      "metadata": {},
+      "previous_ids": [
+        "object-model"
+      ]
+    },
+    {
+      "id": "property",
+      "title": "Python property 属性",
+      "unit_id": "object-model",
+      "order": 23,
+      "source_path": "concepts/Python-property-属性.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "property",
+        "属性"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "mro",
+      "title": "方法解析顺序 MRO",
+      "unit_id": "object-model",
+      "order": 24,
+      "source_path": "concepts/方法解析顺序-MRO.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "MRO",
+        "super"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "generator",
+      "title": "迭代协议与生成器",
+      "unit_id": "generators",
+      "order": 25,
+      "source_path": "concepts/迭代协议与生成器.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "yield",
+        "iterator",
+        "生成器"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "context-manager",
+      "title": "上下文管理器",
+      "unit_id": "generators",
+      "order": 26,
+      "source_path": "concepts/上下文管理器.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "with",
+        "context manager"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "decorator",
+      "title": "装饰器",
+      "unit_id": "advanced-topics",
+      "order": 27,
+      "source_path": "concepts/Python-装饰器.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "decorator",
+        "@"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "closure",
+      "title": "闭包",
+      "unit_id": "advanced-topics",
+      "order": 28,
+      "source_path": "concepts/闭包.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "closure"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "pytest",
+      "title": "pytest",
+      "unit_id": "testing-debugging",
+      "order": 29,
+      "source_path": "concepts/pytest.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "测试",
+        "unit test"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "debugging_testing",
+      "title": "调试与测试",
+      "unit_id": "testing-debugging",
+      "order": 30,
+      "source_path": "concepts/测试-日志与调试.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "pytest",
+        "pdb",
+        "测试",
+        "调试"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    },
+    {
+      "id": "pdb",
+      "title": "Python pdb 调试器",
+      "unit_id": "testing-debugging",
+      "order": 31,
+      "source_path": "concepts/Python-pdb-调试器.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "pdb",
+        "断点"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "packaging",
+      "title": "现代 Python 打包实践",
+      "unit_id": "packages",
+      "order": 32,
+      "source_path": "concepts/现代-Python-打包实践.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "package",
+        "打包"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "pip",
+      "title": "pip 与 PyPI",
+      "unit_id": "packages",
+      "order": 33,
+      "source_path": "concepts/pip-与-PyPI.md",
+      "diagnostic_scope": false,
+      "aliases": [
+        "pip",
+        "PyPI"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "project_practice",
+      "title": "课程练习工作流",
+      "unit_id": "packages",
+      "order": 34,
+      "source_path": "concepts/课程练习工作流.md",
+      "diagnostic_scope": true,
+      "aliases": [
+        "项目",
+        "练习工作流"
+      ],
+      "metadata": {
+        "generated_practice": {
+          "enabled": true,
+          "policy": "Generate targeted practice from public KB concept metadata after diagnostic evidence identifies this gap."
+        }
+      }
+    }
+  ],
+  "mistake_tags": [
+    {
+      "id": "kb-syntax-error",
+      "name": "语法错误",
+      "description": "语法、缩进或关键字大小写导致代码无法解析。",
+      "concept_ids": [
+        "intro-python",
+        "condition",
+        "loop",
+        "function"
+      ],
+      "source_path": "concepts/Python-控制流与缩进.md",
+      "order": 1,
+      "metadata": {
+        "teaching_intent": "语法、缩进或关键字大小写导致代码无法解析。",
+        "evidence_type": "diagnostic_response",
+        "severity": "high",
+        "symptoms": [
+          "语法、缩进或关键字大小写导致代码无法解析。"
+        ],
+        "remediation_concept_ids": [
+          "intro-python",
+          "condition",
+          "loop",
+          "function"
+        ]
+      }
+    },
+    {
+      "id": "kb-type-conversion",
+      "name": "类型转换错误",
+      "description": "类型假设、类型转换、ValueError 或 TypeError 相关问题。",
+      "concept_ids": [
+        "variable",
+        "expression",
+        "data-cleaning"
+      ],
+      "source_path": "concepts/数据清洗与类型转换.md",
+      "order": 2,
+      "metadata": {
+        "teaching_intent": "类型假设、类型转换、ValueError 或 TypeError 相关问题。",
+        "evidence_type": "diagnostic_response",
+        "severity": "medium",
+        "symptoms": [
+          "类型假设、类型转换、ValueError 或 TypeError 相关问题。"
+        ],
+        "remediation_concept_ids": [
+          "variable",
+          "expression",
+          "data-cleaning"
+        ]
+      }
+    },
+    {
+      "id": "kb-output-format",
+      "name": "输出格式问题",
+      "description": "print、字符串格式化或输出格式不符合题目要求。",
+      "concept_ids": [
+        "string",
+        "file_io",
+        "debugging_testing"
+      ],
+      "source_path": "concepts/字符串处理.md",
+      "order": 3,
+      "metadata": {
+        "teaching_intent": "print、字符串格式化或输出格式不符合题目要求。",
+        "evidence_type": "diagnostic_response",
+        "severity": "medium",
+        "symptoms": [
+          "print、字符串格式化或输出格式不符合题目要求。"
+        ],
+        "remediation_concept_ids": [
+          "string",
+          "file_io",
+          "debugging_testing"
+        ]
+      }
+    },
+    {
+      "id": "kb-range-boundary",
+      "name": "范围与边界问题",
+      "description": "range、索引、切片或边界条件处理错误。",
+      "concept_ids": [
+        "loop",
+        "list"
+      ],
+      "source_path": "concepts/列表与序列.md",
+      "order": 4,
+      "metadata": {
+        "teaching_intent": "range、索引、切片或边界条件处理错误。",
+        "evidence_type": "diagnostic_response",
+        "severity": "medium",
+        "symptoms": [
+          "range、索引、切片或边界条件处理错误。"
+        ],
+        "remediation_concept_ids": [
+          "loop",
+          "list"
+        ]
+      }
+    },
+    {
+      "id": "kb-state-update",
+      "name": "状态更新问题",
+      "description": "循环条件、累计变量或状态更新逻辑错误。",
+      "concept_ids": [
+        "loop",
+        "counter-summary"
+      ],
+      "source_path": "concepts/数据计数与汇总.md",
+      "order": 5,
+      "metadata": {
+        "teaching_intent": "循环条件、累计变量或状态更新逻辑错误。",
+        "evidence_type": "diagnostic_response",
+        "severity": "medium",
+        "symptoms": [
+          "循环条件、累计变量或状态更新逻辑错误。"
+        ],
+        "remediation_concept_ids": [
+          "loop",
+          "counter-summary"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "expression",
+      "to": "variable",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "condition",
+      "to": "expression",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "loop",
+      "to": "condition",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "list",
+      "to": "loop",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "function",
+      "to": "variable",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "dict",
+      "to": "list",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "csv-data",
+      "to": "file_io",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "script-main",
+      "to": "function",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "oop",
+      "to": "dict",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "pytest",
+      "to": "function",
+      "type": "prerequisite",
+      "metadata": {
+        "rationale": "Prerequisite declared by the KB course catalog for diagnostic and remediation ordering."
+      }
+    },
+    {
+      "from": "variable",
+      "to": "intro-python",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "string",
+      "to": "loop",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "file_io",
+      "to": "list",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "tuple",
+      "to": "function",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "set",
+      "to": "dict",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "data-cleaning",
+      "to": "csv-data",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "counter-summary",
+      "to": "data-cleaning",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "function-parameters",
+      "to": "counter-summary",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "module_package",
+      "to": "script-main",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "exception",
+      "to": "module_package",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "inheritance",
+      "to": "oop",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "python-object-model",
+      "to": "inheritance",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "property",
+      "to": "python-object-model",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "mro",
+      "to": "property",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "generator",
+      "to": "mro",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "context-manager",
+      "to": "generator",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "decorator",
+      "to": "context-manager",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "closure",
+      "to": "decorator",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "debugging_testing",
+      "to": "pytest",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "pdb",
+      "to": "debugging_testing",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "packaging",
+      "to": "pdb",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "pip",
+      "to": "packaging",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    },
+    {
+      "from": "project_practice",
+      "to": "pip",
+      "type": "follows",
+      "weight": 0.5,
+      "metadata": {
+        "rationale": "Sequential catalog progression retained as explicit KB-owned structure."
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "practical-python-1.1",
+      "title": "Using Python as a Calculator",
+      "source_path": "exercises/1-1-using-python-as-a-calculator.md",
+      "concept_ids": [
+        "expression"
+      ],
+      "order": 1,
+      "difficulty": 1,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-1.5",
+      "title": "The Bouncing Ball",
+      "source_path": "exercises/1-5-the-bouncing-ball.md",
+      "concept_ids": [
+        "loop",
+        "expression"
+      ],
+      "order": 2,
+      "difficulty": 1,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-1.6",
+      "title": "Debugging",
+      "source_path": "exercises/1-6-debugging.md",
+      "concept_ids": [
+        "debugging_testing"
+      ],
+      "order": 3,
+      "difficulty": 1,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-1.7",
+      "title": "Dave's Mortgage",
+      "source_path": "exercises/1-7-dave-s-mortgage.md",
+      "concept_ids": [
+        "loop",
+        "expression"
+      ],
+      "order": 4,
+      "difficulty": 2,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-1.20",
+      "title": "Looping over List Items",
+      "source_path": "exercises/1-20-looping-over-list-items.md",
+      "concept_ids": [
+        "list",
+        "loop"
+      ],
+      "order": 5,
+      "difficulty": 2,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-1.27",
+      "title": "Reading a Data File",
+      "source_path": "exercises/1-27-reading-a-data-file.md",
+      "concept_ids": [
+        "file_io"
+      ],
+      "order": 6,
+      "difficulty": 2,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-1.29",
+      "title": "Defining a Function",
+      "source_path": "exercises/1-29-defining-a-function.md",
+      "concept_ids": [
+        "function"
+      ],
+      "order": 7,
+      "difficulty": 2,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-2.1",
+      "title": "Tuples",
+      "source_path": "exercises/2-1-tuples.md",
+      "concept_ids": [
+        "tuple"
+      ],
+      "order": 8,
+      "difficulty": 2,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-2.2",
+      "title": "Dictionaries as a Data Structure",
+      "source_path": "exercises/2-2-dictionaries-as-a-data-structure.md",
+      "concept_ids": [
+        "dict"
+      ],
+      "order": 9,
+      "difficulty": 2,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-2.13",
+      "title": "Counting",
+      "source_path": "exercises/2-13-counting.md",
+      "concept_ids": [
+        "counter-summary",
+        "dict"
+      ],
+      "order": 10,
+      "difficulty": 2,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-2.19",
+      "title": "List Comprehensions",
+      "source_path": "exercises/2-19-list-comprehensions.md",
+      "concept_ids": [
+        "list"
+      ],
+      "order": 11,
+      "difficulty": 2,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-2.23",
+      "title": "Extracting Data from CSV Files",
+      "source_path": "exercises/2-23-extracting-data-from-csv-files.md",
+      "concept_ids": [
+        "csv-data",
+        "file_io"
+      ],
+      "order": 12,
+      "difficulty": 3,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-3.1",
+      "title": "Structuring a Program as Functions",
+      "source_path": "exercises/3-1-structuring-a-program-as-a-collection-of-functions.md",
+      "concept_ids": [
+        "function"
+      ],
+      "order": 13,
+      "difficulty": 3,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-3.3",
+      "title": "Reading CSV Files",
+      "source_path": "exercises/3-3-reading-csv-files.md",
+      "concept_ids": [
+        "csv-data",
+        "function"
+      ],
+      "order": 14,
+      "difficulty": 3,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-3.8",
+      "title": "Raising Exceptions",
+      "source_path": "exercises/3-8-raising-exceptions.md",
+      "concept_ids": [
+        "exception"
+      ],
+      "order": 15,
+      "difficulty": 3,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-3.11",
+      "title": "Module Imports",
+      "source_path": "exercises/3-11-module-imports.md",
+      "concept_ids": [
+        "module_package"
+      ],
+      "order": 16,
+      "difficulty": 3,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-3.15",
+      "title": "Main Functions",
+      "source_path": "exercises/3-15-main-functions.md",
+      "concept_ids": [
+        "script-main"
+      ],
+      "order": 17,
+      "difficulty": 3,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-4.1",
+      "title": "Objects as Data Structures",
+      "source_path": "exercises/4-1-objects-as-data-structures.md",
+      "concept_ids": [
+        "oop"
+      ],
+      "order": 18,
+      "difficulty": 3,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-4.6",
+      "title": "Using Inheritance",
+      "source_path": "exercises/4-6-using-inheritance-to-produce-different-output.md",
+      "concept_ids": [
+        "inheritance"
+      ],
+      "order": 19,
+      "difficulty": 4,
+      "metadata": {
+        "selection_context": {
+          "stage": "post-diagnostic-practice",
+          "after_concept_ids": [
+            "oop"
+          ],
+          "purpose": "Advanced or enrichment exercise selected only after prerequisite active path is reached."
+        }
+      }
+    },
+    {
+      "id": "practical-python-5.1",
+      "title": "Representation of Instances",
+      "source_path": "exercises/5-1-representation-of-instances.md",
+      "concept_ids": [
+        "python-object-model"
+      ],
+      "order": 20,
+      "difficulty": 4,
+      "metadata": {
+        "selection_context": {
+          "stage": "post-diagnostic-practice",
+          "after_concept_ids": [
+            "oop"
+          ],
+          "purpose": "Advanced or enrichment exercise selected only after prerequisite active path is reached."
+        }
+      }
+    },
+    {
+      "id": "practical-python-5.6",
+      "title": "Simple Properties",
+      "source_path": "exercises/5-6-simple-properties.md",
+      "concept_ids": [
+        "property"
+      ],
+      "order": 21,
+      "difficulty": 4,
+      "metadata": {
+        "selection_context": {
+          "stage": "post-diagnostic-practice",
+          "after_concept_ids": [
+            "oop"
+          ],
+          "purpose": "Advanced or enrichment exercise selected only after prerequisite active path is reached."
+        }
+      }
+    },
+    {
+      "id": "practical-python-6.1",
+      "title": "Iteration Illustrated",
+      "source_path": "exercises/6-1-iteration-illustrated.md",
+      "concept_ids": [
+        "generator"
+      ],
+      "order": 22,
+      "difficulty": 4,
+      "metadata": {
+        "selection_context": {
+          "stage": "post-diagnostic-practice",
+          "after_concept_ids": [
+            "oop"
+          ],
+          "purpose": "Advanced or enrichment exercise selected only after prerequisite active path is reached."
+        }
+      }
+    },
+    {
+      "id": "practical-python-7.10",
+      "title": "A Decorator for Timing",
+      "source_path": "exercises/7-10-a-decorator-for-timing.md",
+      "concept_ids": [
+        "decorator"
+      ],
+      "order": 23,
+      "difficulty": 4,
+      "metadata": {
+        "selection_context": {
+          "stage": "post-diagnostic-practice",
+          "after_concept_ids": [
+            "oop"
+          ],
+          "purpose": "Advanced or enrichment exercise selected only after prerequisite active path is reached."
+        }
+      }
+    },
+    {
+      "id": "practical-python-8.1",
+      "title": "Writing Unit Tests",
+      "source_path": "exercises/8-1-writing-unit-tests.md",
+      "concept_ids": [
+        "pytest"
+      ],
+      "order": 24,
+      "difficulty": 3,
+      "metadata": {}
+    },
+    {
+      "id": "practical-python-9.1",
+      "title": "Making a Simple Package",
+      "source_path": "exercises/9-1-making-a-simple-package.md",
+      "concept_ids": [
+        "packaging",
+        "module_package"
+      ],
+      "order": 25,
+      "difficulty": 4,
+      "metadata": {}
+    }
+  ],
+  "inventory": {
+    "concepts": [
+      {
+        "source_path": "concepts/绑定方法.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/包与虚拟环境.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/变量绑定.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/标准输入输出与管道.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/表格化输出.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/代码分发.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/单元测试.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/调用栈与-traceback.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/动态属性访问.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/断言.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/队列与滑动窗口.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/对象身份与相等性.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/浮点数精度.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/函数作为对象.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/环境变量与进程环境.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/回调函数.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/开源内容署名与相同方式共享.md",
+        "status": "support",
+        "reason": "Support reference material kept out of the active progress path."
+      },
+      {
+        "source_path": "concepts/可变性与引用.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/库接口设计.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/类型注解.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/列表推导式.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/流式数据处理.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/命令行参数.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/模块与-import.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/排序-key-函数.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/浅拷贝与深拷贝.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/软件测试.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/生产者消费者模式.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/生成器表达式.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/数据流管道.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/特殊方法.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/替代构造器.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/文件类对象.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/鸭子类型.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/延迟执行.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/依赖管理.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/正则表达式.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/CC-BY-SA-4-0.md",
+        "status": "support",
+        "reason": "Support reference material kept out of the active progress path."
+      },
+      {
+        "source_path": "concepts/Git-与课程仓库管理.md",
+        "status": "support",
+        "reason": "Support reference material kept out of the active progress path."
+      },
+      {
+        "source_path": "concepts/itertools-模块.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Mixin-模式.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/None-与缺失值.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-不可变对象.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-参数传递.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-导入缓存.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-封装与访问约定.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-开发环境.md",
+        "status": "support",
+        "reason": "Support reference material kept out of the active progress path."
+      },
+      {
+        "source_path": "concepts/Python-拷贝语义.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-可变对象.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-命名空间与作用域.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-切片.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-容器.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-输入输出.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-网络请求.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-文档与帮助系统.md",
+        "status": "support",
+        "reason": "Support reference material kept out of the active progress path."
+      },
+      {
+        "source_path": "concepts/Python-项目组织.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-真值测试.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-自省.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-slots.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Python-staticmethod-与-classmethod.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/site-packages.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/Unicode-与编码.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      },
+      {
+        "source_path": "concepts/XML-解析.md",
+        "status": "deferred",
+        "reason": "Public KB concept deferred until teaching intent, relations, and practice metadata are reviewed for activation."
+      }
+    ],
+    "exercises": [
+      {
+        "source_path": "exercises/1-10-making-a-table.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-11-bonus.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-12-a-mystery.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-13-extracting-individual-characters-and-substrings.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-14-string-concatenation.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-15-membership-testing-substring-testing.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-16-string-methods.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-17-f-strings.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-18-regular-expressions.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-19-extracting-and-reassigning-list-elements.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-2-getting-help.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-21-membership-tests.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-22-appending-inserting-and-deleting-items.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-23-sorting.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-24-putting-it-all-back-together.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-25-lists-of-anything.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-26-file-preliminaries.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-28-other-kinds-of-files.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-3-cutting-and-pasting.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-30-turning-a-script-into-a-function.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-31-error-handling.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-32-using-a-library-function.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-33-reading-from-the-command-line.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-4-where-is-my-bus.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-8-extra-payments.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/1-9-making-an-extra-payment-calculator.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-10-printing-a-formatted-table.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-11-adding-some-headers.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-12-formatting-challenge.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-14-more-sequence-operations.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-15-a-practical-enumerate-example.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-16-using-the-zip-function.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-17-inverting-a-dictionary.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-18-tabulating-with-counters.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-20-sequence-reductions.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-21-data-queries.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-22-data-extraction.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-24-first-class-data.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-25-making-dictionaries.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-26-the-big-picture.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-3-some-additional-dictionary-operations.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-4-a-list-of-tuples.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-5-list-of-dictionaries.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-6-dictionaries-as-a-container.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-7-finding-out-if-you-can-retire.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-8-how-to-format-numbers.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/2-9-collecting-data.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-10-silencing-errors.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-12-using-your-library-module.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-13-intentionally-left-blank-skip.md",
+        "status": "excluded",
+        "reason": "Original exercise is explicitly marked as skipped in the public course material."
+      },
+      {
+        "source_path": "exercises/3-14-using-more-library-imports.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-16-making-scripts.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-17-from-filenames-to-file-like-objects.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-18-fixing-existing-functions.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-2-creating-a-top-level-function-for-program-execution.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-4-building-a-column-selector.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-5-performing-type-conversion.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-6-working-without-headers.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-7-picking-a-different-column-delimiter.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/3-9-catching-exceptions.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-10-an-example-of-using-getattr.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-11-defining-a-custom-exception.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-2-adding-some-methods.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-3-creating-a-list-of-instances.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-4-using-your-class.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-5-an-extensibility-problem.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-7-polymorphism-in-action.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-8-putting-it-all-together.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/4-9-better-output-for-printing-objects.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/5-2-modification-of-instance-data.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/5-3-the-role-of-classes.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/5-4-bound-methods.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/5-5-inheritance.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/5-7-properties-and-setters.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/5-8-adding-slots.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-10-making-more-pipeline-components.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-11-filtering-data.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-12-putting-it-all-together.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-13-generator-expressions.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-14-generator-expressions-in-function-arguments.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-15-code-simplification.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-2-supporting-iteration.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-3-making-a-more-proper-container.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-4-a-simple-generator.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-5-monitoring-a-streaming-data-source.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-6-using-a-generator-to-produce-data.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-7-watching-your-portfolio.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-8-setting-up-a-simple-pipeline.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/6-9-setting-up-a-more-complex-pipeline.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-1-a-simple-example-of-variable-arguments.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-11-class-methods-in-practice.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-2-passing-tuple-and-dicts-as-arguments.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-3-creating-a-list-of-instances.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-4-argument-pass-through.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-5-sorting-on-a-field.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-6-sorting-on-a-field-with-lambda.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-7-using-closures-to-avoid-repetition.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-8-simplifying-function-calls.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/7-9-putting-it-into-practice.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/8-2-adding-logging-to-a-module.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/8-3-adding-logging-to-a-program.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/8-4-bugs-what-bugs.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/9-2-making-an-application-directory.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/9-3-top-level-scripts.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/9-4-creating-a-virtual-environment.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      },
+      {
+        "source_path": "exercises/9-5-make-a-package.md",
+        "status": "deferred",
+        "reason": "Public exercise deferred until concept links, difficulty, and selection context are reviewed for activation."
+      }
+    ]
+  },
+  "course_setup": {
+    "title": "课程准备",
+    "status": "support",
+    "source_paths": [
+      "summaries/00_Setup.md",
+      "sources/00_Setup.md"
+    ],
+    "reason": "Environment setup supports the learner but is not an active progress concept or diagnostic target."
+  }
+}

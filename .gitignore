@@ -1,0 +1,11 @@
+.pytest_cache/
+__pycache__/
+*.py[cod]
+kb/**/wiki/reports/
+kb/**/private/
+/node_modules
+/.app
+/dist
+/paper/
+.env
+.env.local

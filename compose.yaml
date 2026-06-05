@@ -1,0 +1,37 @@
+services:
+  agent-service:
+    image: node:24.14.0-bookworm-slim
+    working_dir: /app
+    command: sh -c "npm install && npm start"
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      PORT: "3000"
+      APP_DATA_DIR: /app/.app
+      COURSE_KB_ROOT: /app/kb/python-course-kb-practical-python/wiki
+      COURSE_KB_VERSION: kb-local
+      SANDBOX_IMAGE: coding-mentor-python-runner:0.1.0
+      SANDBOX_SERVICE_URL: http://sandbox-service:3001
+    volumes:
+      - .:/app
+    depends_on:
+      - sandbox-service
+
+  sandbox-service:
+    image: node:24.14.0-bookworm-slim
+    working_dir: /app
+    command: sh -c "npm install && npm run start:sandbox"
+    environment:
+      SANDBOX_HOST: 0.0.0.0
+      SANDBOX_PORT: "3001"
+      SANDBOX_IMAGE: coding-mentor-python-runner:0.1.0
+    volumes:
+      - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  sandbox-runner-image:
+    image: coding-mentor-python-runner:0.1.0
+    build:
+      context: .
+      dockerfile: sandbox-runner.Dockerfile
+    command: ["python", "--version"]
