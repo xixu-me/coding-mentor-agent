@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@codemirror/lang-python": "^6.2.1",
-    "@codemirror/view": "^6.39.8",
+    "@codemirror/view": "^6.43.0",
     "@earendil-works/pi-ai": "^0.74.0",
     "@earendil-works/pi-coding-agent": "^0.74.0",
     "@earendil-works/pi-web-ui": "^0.74.0",
