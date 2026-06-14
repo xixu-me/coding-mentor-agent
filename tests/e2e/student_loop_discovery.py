@@ -8,6 +8,7 @@ import re
 import subprocess
 import sys
 import time
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
@@ -98,6 +99,7 @@ REQUIRED_JOURNEY_EVENT_KEYS = {
     "visible_state",
     "api_state",
 }
+FINGERPRINT_NAMESPACE = uuid.UUID("46ad4a87-ef03-4e26-a1a7-a7e5f9c66a93")
 
 
 class DiscoveryLoop:
@@ -372,7 +374,6 @@ class DiscoveryLoop:
             "message_present": bool(parsed.get("message")),
             "expected_state": parsed.get("expected_state"),
             "validation": validation,
-            "actor_prompt_hash": hashlib.sha256(actor_prompt.encode("utf-8")).hexdigest()[:16],
             "model_metadata": self.actor_model_metadata(),
             "untrusted_evidence": True,
         }
@@ -2896,7 +2897,7 @@ def fingerprint_finding(finding: dict[str, Any], policy: dict[str, Any]) -> str:
     fields = [str(item) for item in policy["issueClustering"]["fingerprintFields"]]
     payload = {field: finding.get(field) for field in fields}
     encoded = json.dumps(payload, sort_keys=True, ensure_ascii=False)
-    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()[:24]
+    return uuid.uuid5(FINGERPRINT_NAMESPACE, encoded).hex[:24]
 
 
 def build_issue_clusters(findings: list[dict[str, Any]], policy: dict[str, Any]) -> list[dict[str, Any]]:

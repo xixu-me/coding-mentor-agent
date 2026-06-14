@@ -1,6 +1,7 @@
 import json
 import re
 from pathlib import Path
+from urllib.parse import urlparse
 
 
 KB_ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +17,7 @@ PROMPT_INJECTION_RE = re.compile(
     r"(ignore previous instructions|disregard previous instructions|reveal the system prompt)",
     re.IGNORECASE,
 )
+URL_RE = re.compile(r"https?://[^\s<>)\]]+")
 
 VISIBLE_FORBIDDEN_PATTERNS = (
     "../private",
@@ -96,6 +98,14 @@ def read_text(path: Path) -> str:
 
 def rel(path: Path) -> str:
     return path.relative_to(KB_ROOT).as_posix()
+
+
+def contains_insecure_docs_python_url(text: str) -> bool:
+    for match in URL_RE.finditer(text):
+        parsed = urlparse(match.group(0).rstrip(".,;:"))
+        if parsed.scheme == "http" and parsed.netloc == "docs.python.org":
+            return True
+    return False
 
 
 def frontmatter_value(text: str, key: str) -> str | None:
@@ -285,7 +295,7 @@ def test_semantic_lint_known_findings_stay_fixed():
         errors.append("summaries/01_Python.md does not clarify Python 3.6 historical context")
     if "不保证 URL 长期可用" not in python_summary or "本地 XML 示例文件" not in python_summary:
         errors.append("summaries/01_Python.md does not clarify external API example stability")
-    if "http://docs.python.org" in python_summary:
+    if contains_insecure_docs_python_url(python_summary):
         errors.append("summaries/01_Python.md still uses HTTP docs.python.org link")
 
     if "[[summaries/practical-python-attribution]]" not in overview:
@@ -321,7 +331,7 @@ def test_semantic_lint_known_findings_stay_fixed():
         WIKI_ROOT / "concepts" / "Python-文档与帮助系统.md",
         WIKI_ROOT / "exercises" / "1-2-getting-help.md",
     ]:
-        if "http://docs.python.org" in read_text(path):
+        if contains_insecure_docs_python_url(read_text(path)):
             errors.append(f"{rel(path)} still uses HTTP docs.python.org link")
 
     for target in REMOVED_CONCEPT_ALIAS_TARGETS:
@@ -339,6 +349,12 @@ def test_semantic_lint_known_findings_stay_fixed():
             errors.append(f"{rel(path)} still uses version-specific python3.6 paths")
 
     assert errors == []
+
+
+def test_docs_python_http_detection_matches_exact_host():
+    assert contains_insecure_docs_python_url("See http://docs.python.org/3/library/pathlib.html")
+    assert not contains_insecure_docs_python_url("See https://docs.python.org/3/library/pathlib.html")
+    assert not contains_insecure_docs_python_url("See http://docs.python.org.example.com/3/library/pathlib.html")
 
 
 def test_followup_enhancements_are_indexed_and_scoped():
