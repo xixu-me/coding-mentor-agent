@@ -32,7 +32,7 @@
     "@codemirror/lang-python": "^6.2.1",
     "@codemirror/view": "^6.43.0",
     "@earendil-works/pi-ai": "^0.79.3",
-    "@earendil-works/pi-coding-agent": "^0.79.4",
+    "@earendil-works/pi-coding-agent": "^0.79.8",
     "@earendil-works/pi-web-ui": "^0.75.3",
     "@mariozechner/mini-lit": "^0.2.0",
     "@sinclair/typebox": "^0.34.41",
