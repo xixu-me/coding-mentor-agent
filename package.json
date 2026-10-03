@@ -64,6 +64,6 @@
     "fast-uri": "^3.1.6",
     "@vitest/mocker": "^4.1.11",
     "undici": "^8.10.2",
-    "brace-expansion": "^5.0.12"
+    "brace-expansion": "5.0.12"
   }
 }
