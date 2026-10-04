@@ -59,5 +59,11 @@
     "typescript": "^7.0.2",
     "vite": "^8.0.16",
     "vitest": "^5.0.3"
+  },
+  "overrides": {
+    "fast-uri": "^3.1.6",
+    "@vitest/mocker": "^4.1.11",
+    "undici": "^8.10.2",
+    "brace-expansion": "5.0.12"
   }
 }
