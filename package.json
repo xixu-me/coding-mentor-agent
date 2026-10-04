@@ -32,7 +32,7 @@
     "@codemirror/lang-python": "^6.2.1",
     "@codemirror/view": "^6.43.6",
     "@earendil-works/pi-ai": "^0.84.2",
-    "@earendil-works/pi-coding-agent": "^1.0.0",
+    "@earendil-works/pi-coding-agent": "^1.0.1",
     "@earendil-works/pi-web-ui": "^0.75.3",
     "@mariozechner/mini-lit": "^0.2.0",
     "@sinclair/typebox": "^0.34.41",
@@ -53,6 +53,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.5",
     "@vitest/browser": "^4.1.11",
+    "brace-expansion": "^5.0.12",
     "jsdom": "^30.0.1",
     "playwright": "^1.57.0",
     "tsx": "^4.22.4",
@@ -64,6 +65,6 @@
     "fast-uri": "^3.1.6",
     "@vitest/mocker": "^4.1.11",
     "undici": "^8.10.2",
-    "brace-expansion": "5.0.12"
+    "brace-expansion": "^5.0.12"
   }
 }
