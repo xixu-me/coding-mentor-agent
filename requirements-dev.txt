@@ -1,0 +1,2 @@
+# Python student-loop policy checks and browser harness.
+playwright==1.64.0

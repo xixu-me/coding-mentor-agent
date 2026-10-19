@@ -65,11 +65,10 @@ export async function createPiCourseSession(
   toolContext: PiToolContext = {},
 ): Promise<unknown> {
   const {
-    AuthStorage,
     createAgentSession,
     DefaultResourceLoader,
     getAgentDir,
-    ModelRegistry,
+    ModelRuntime,
     SessionManager,
     SettingsManager,
   } = await import("@earendil-works/pi-coding-agent");
@@ -80,8 +79,10 @@ export async function createPiCourseSession(
   mkdirSync(sessionDir, { recursive: true });
 
   const settingsManager = SettingsManager.inMemory();
-  const authStorage = AuthStorage.create(join(runtime.config.appDataDir, "auth.json"));
-  const modelRegistry = ModelRegistry.create(authStorage);
+  const modelRuntime = await ModelRuntime.create({
+    authPath: join(runtime.config.appDataDir, "auth.json"),
+    modelsPath: join(runtime.config.appDataDir, "models.json"),
+  });
   const agentDir = getAgentDir();
   const tools = getEnabledToolNamesForGroup(runtime.config.enabledBatch, allowedToolGroup);
   const resourceLoader = new DefaultResourceLoader({
@@ -99,21 +100,20 @@ export async function createPiCourseSession(
       enabledTools: tools,
     }),
     appendSystemPromptOverride: () => [],
-  } as any);
+  });
   await resourceLoader.reload();
 
   return createAgentSession({
     cwd,
     agentDir,
-    authStorage,
-    modelRegistry,
+    modelRuntime,
     sessionManager: SessionManager.create(cwd, sessionDir),
     settingsManager,
     resourceLoader,
     noTools: "builtin",
     tools,
     customTools: buildPiToolDefinitions(runtime, allowedToolGroup, toolContext).filter((tool) => tools.includes(tool.name)),
-  } as any);
+  });
 }
 
 export function getEnabledToolNamesForGroup(enabledBatch: AppRuntime["config"]["enabledBatch"], allowedToolGroup: ToolGroupId): string[] {
