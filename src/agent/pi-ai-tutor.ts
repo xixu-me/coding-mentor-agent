@@ -1,4 +1,4 @@
-import { completeSimple as piCompleteSimple, getModel as piGetModel } from "@earendil-works/pi-ai";
+import { completeSimple as piCompleteSimple, getModel as piGetModel } from "@earendil-works/pi-ai/compat";
 import type { AssistantMessage, Context, Model, SimpleStreamOptions } from "@earendil-works/pi-ai";
 import type { AiApi, AiReasoning, TutorResponder } from "../types.js";
 import { AppError } from "../types.js";

@@ -9,3 +9,5 @@ kb/**/private/
 /paper/
 .env
 .env.local
+
+/.venv
