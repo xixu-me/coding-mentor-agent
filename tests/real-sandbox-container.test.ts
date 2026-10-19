@@ -24,7 +24,7 @@ describe("real one-shot sandbox container", () => {
       code: "print('hello from sandbox')\n",
     });
 
-    expect(result.status).toBe("passed");
+    expect(result.status, result.stderr).toBe("passed");
     expect(result.stdout).toBe("hello from sandbox\n");
     expect(result.stderr).toBe("");
   }, 60000);
@@ -51,7 +51,7 @@ describe("real one-shot sandbox container", () => {
       ].join("\n"),
     });
 
-    expect(result.status).toBe("passed");
+    expect(result.status, result.stderr).toBe("passed");
     expect(result.stdout).not.toContain("network-open");
   }, 60000);
 
@@ -78,7 +78,7 @@ describe("real one-shot sandbox container", () => {
       ].join("\n"),
     });
 
-    expect(result.status).toBe("passed");
+    expect(result.status, result.stderr).toBe("passed");
     expect(result.stdout).toContain("source_tree False");
     expect(result.stdout).toContain("kb_tree False");
     expect(result.stdout).toContain("progress_db False");

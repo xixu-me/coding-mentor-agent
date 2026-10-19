@@ -132,6 +132,27 @@ The backend serves the React app and exposes local JSON/SSE endpoints:
 
 ## Development
 
+For a complete test run, start Docker and prepare the sandbox runner image.
+The protocol policy tests also import the Python Playwright harness:
+
+```bash
+npm ci
+python -m venv .venv
+source .venv/bin/activate # Windows: .venv\Scripts\activate
+python -m pip install -r requirements-dev.txt
+docker build -t coding-mentor-python-runner:0.1.0 -f sandbox-runner.Dockerfile .
+npm run lint
+npm test
+npm run build
+```
+
+Browser journey runs additionally require `python -m playwright install chromium`.
+The regular test suite validates the harness policies without launching a browser
+or contacting an AI provider. Real Docker isolation tests remain part of `npm test`;
+missing Docker or a missing runner image is a failure, not a skipped test.
+See [Student Loop Protocol](docs/student-loop-protocol.md) for run boundaries and
+the [repair checklist](docs/student-loop-repair-checklist.md) for evidence fields.
+
 Common scripts:
 
 | Command | Description |
@@ -172,6 +193,18 @@ Make sure Docker is running and the runner image exists:
 ```bash
 docker build -t coding-mentor-python-runner:0.1.0 -f sandbox-runner.Dockerfile .
 ```
+
+On macOS, Colima must be able to mount the sandbox temporary directory. If it
+reports that a bind source path does not exist, use a directory inside your
+shared home folder for the server or tests:
+
+```bash
+mkdir -p "$PWD/.app/sandbox-tmp"
+TMPDIR="$PWD/.app/sandbox-tmp" npm test
+```
+
+The sandbox mounts only the individual generated run directory, not the source
+tree or learning database. Keep this directory outside student-controlled paths.
 
 **Port already in use**
 
