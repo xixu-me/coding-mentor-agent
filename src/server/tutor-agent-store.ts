@@ -171,7 +171,7 @@ export function loadRecentTutorAgentActions(runtime: AppRuntime, sessionId: stri
     `SELECT id, turn_id, action_kind, concept_id, validation_status, validation_code, learner_facing_response, created_at
      FROM tutor_agent_actions
      WHERE session_id = ?
-     ORDER BY created_at DESC
+     ORDER BY created_at DESC, rowid DESC
      LIMIT ?`,
   ).all([sessionId, Math.max(1, Math.min(10, limit))]).map(toActionSummary);
 }
@@ -185,7 +185,7 @@ export function loadTutorAgentActionsForTurns(runtime: AppRuntime, sessionId: st
     `SELECT id, turn_id, action_kind, concept_id, validation_status, validation_code, learner_facing_response, created_at
      FROM tutor_agent_actions
      WHERE session_id = ? AND turn_id IN (${placeholders})
-     ORDER BY created_at ASC, id ASC`,
+     ORDER BY created_at ASC, rowid ASC`,
   ).all([sessionId, ...uniqueTurnIds]);
   for (const action of rows.map(toActionSummary)) {
     if (!action.turn_id) continue;
