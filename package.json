@@ -64,8 +64,10 @@
   "overrides": {
     "fast-uri": "^3.1.6",
     "@vitest/mocker": "^5.0.3",
-    "undici": "^8.10.2",
+    "undici": "^8.12.3",
     "brace-expansion": "^5.0.12",
-    "katex": "^0.18.2"
+    "katex": "^0.18.2",
+    "minimatch": "^11.0.4",
+    "zod": "^4.6.7"
   }
 }
